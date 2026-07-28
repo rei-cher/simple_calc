@@ -1,5 +1,5 @@
 #include <stdint.h>
-#include "operations.h"
+#include "calc_operations.h"
 
 int32_t add(int32_t f_num, int32_t s_num){
 	return f_num + s_num;

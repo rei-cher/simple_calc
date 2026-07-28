@@ -3,7 +3,8 @@
 #include <stdint.h>
 #include <string.h>
 #include "calculator.h"
-#include "operations.h"
+#include "calc_operations.h"
+#include "bit_operations.h"
 
 static void usage(const char *name){
 	printf("Incorrect supply of arguments.\n");
@@ -13,7 +14,7 @@ static void usage(const char *name){
 
 int start(int argc, char *argv[]){
 	int32_t f_num, s_num, result;
-	char op;
+	char *op;
 
 	// check if all 3 arguments were supplied
 	if (4 != argc){
@@ -24,16 +25,16 @@ int start(int argc, char *argv[]){
 	f_num = atof(argv[1]);
 	s_num = atof(argv[3]);
 
-	// validate opeator
-	if (1 != strlen(argv[2])) {
-			printf("Incorrect operator.\n");
-			usage(argv[0]);
-			return 1;
-		}
+	op = argv[2];
 
-	op = argv[2][0];
+	// check if the operator falls within the limits length
+	if (0 == strlen(op) || strlen(op) > 3) { 
+		printf("Error: incorrect operator.\n");
+		usage(argv[0]);
+		return 1;
+	}
 
-	switch (op){
+	switch (op[0]){
 		case '+':
 			printf("%d\n", add(f_num, s_num));
 			break;
@@ -58,6 +59,41 @@ int start(int argc, char *argv[]){
 			}
 			
 			printf("%d\n", result);
+			break;
+		case '&':
+			printf("%u\n", op_and(f_num, s_num));
+			break;
+		case '|':
+			printf("%u\n", op_or(f_num, s_num));
+			break;
+		case '^':
+			printf("%u\n", op_xor(f_num, s_num));
+			break;
+		case '<':
+			if (0 == strcmp(op, "<<")){
+				printf("%u\n", l_shift(f_num, s_num));
+			}
+			else if (0 == strcmp(op, "<<<")){
+				printf("%u\n", l_rotate(f_num, s_num));
+			}
+			else {
+				printf("Error: incorrect operator.\n");
+				usage(argv[0]);
+				return 1;
+			}
+			break;
+		case '>':
+			if (0 == strcmp(op, ">>")){
+				printf("%u\n", r_shift(f_num, s_num));
+			}
+			else if (0 == strcmp(op, ">>>")){
+				printf("%u\n", r_rotate(f_num, s_num));
+			}
+			else {
+				printf("Error: incorrect operator.\n");
+				usage(argv[0]);
+				return 1;
+			}
 			break;
 		default:
 			printf("Error: unsupported operator");

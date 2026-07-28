@@ -17,7 +17,8 @@ add_executable(
 	${EXECUTABLE_NAME}
 	src/main.c
 	src/calculator.c
-	src/operations.c
+	src/calc_operations.c
+	src/bit_operations.c
 )
 
 target_include_directories(

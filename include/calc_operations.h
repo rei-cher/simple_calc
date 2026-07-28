@@ -1,5 +1,5 @@
-#ifndef OPERATIONS_H
-#define OPERATIONS_H
+#ifndef CALC_OPERATIONS_H
+#define CALC_OPERATIONS_H
 
 #include <stdint.h>
 
