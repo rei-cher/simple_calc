@@ -20,6 +20,7 @@ static void usage(const char *name){
 
 // TODO: input handle function
 // handle bad inputs, integer overflow, etc
+// usigned int should not be negative
 static int handle_input(const char *argv){
 
 }
@@ -75,6 +76,7 @@ int start(int argc, char *argv[]){
 			
 			printf("%d\n", result.signed_value);
 			break;
+		// TODO: should not operate with negative numbers
 		case '&':
 			result.unsigned_value = op_and(f_num.unsigned_value, s_num.unsigned_value);
 			printf("%u\n", result.unsigned_value);
