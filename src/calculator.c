@@ -10,7 +10,7 @@
 typedef union {
 	int32_t signed_value;
 	uint32_t unsigned_value;
-} int32_value;
+} number_t;
 
 static void usage(const char *name){
 	printf("Incorrect supply of arguments.\n");
@@ -74,7 +74,6 @@ static int validate_uint32(const char *argv, uint32_t *converted_argv){
 }
 
 int start(int argc, char *argv[]){
-	int32_value f_num, s_num, result;
 	char *op;
 
 	// check if all 3 arguments were supplied

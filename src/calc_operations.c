@@ -4,9 +4,11 @@
  */
 
 #include <stdint.h>
+#include "calc_status.h"
 #include "calc_operations.h"
 
-calc_status_t add(int32_t f_num, int32_t s_num, int32_t * result){
+calc_status_t add(int32_t f_num, int32_t s_num, int32_t * result)
+{
 	calc_status_t status = CALC_STATUS_OK;
 
 	if (NULL == result)
@@ -26,7 +28,8 @@ calc_status_t add(int32_t f_num, int32_t s_num, int32_t * result){
 	return result;
 }
 
-calc_status_t subtract(int32_t f_num, int32_t s_num, int32_t * result){
+calc_status_t subtract(int32_t f_num, int32_t s_num, int32_t * result)
+{
 	calc_status_t status = CALS_STATUS_OK;
 
 	if (NULL == result)
@@ -46,7 +49,8 @@ calc_status_t subtract(int32_t f_num, int32_t s_num, int32_t * result){
 	return result;
 }
 
-calc_status_t multiply(int32_t f_num, int32_t s_num){
+calc_status_t multiply(int32_t f_num, int32_t s_num)
+{
 	calc_status_t status = CALS_STATUS_OK;
 
 	if (NULL == result)
@@ -70,7 +74,8 @@ calc_status_t multiply(int32_t f_num, int32_t s_num){
 	return result;
 }
 
-calc_status_t divide(int32_t f_num, int32_t s_num, int32_t *result){
+calc_status_t divide(int32_t f_num, int32_t s_num, int32_t *result)
+{
 	calc_status_t status = CALS_STATUS_OK;
 
 	if (NULL == result)
@@ -92,7 +97,8 @@ calc_status_t divide(int32_t f_num, int32_t s_num, int32_t *result){
 	return result;
 }
 
-calc_status_t modulo(int32_t f_num, int32_t s_num, int32_t *result){
+calc_status_t modulo(int32_t f_num, int32_t s_num, int32_t *result)
+{
 	calc_status_t status = CALS_STATUS_OK;
 
 	if (NULL == result)

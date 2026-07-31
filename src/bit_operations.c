@@ -1,35 +1,155 @@
+/** @file bit_operations.c
+ *
+ * @brief Perform bitwise operations
+ *
+ */
+
 #include <stdint.h>
+#include "calc_status.h"
 #include "bit_operations.h"
 
-// TODO: edge cases for shifts and rotations
-// edge cases and integer overflow/undeflow for all operations
+#define UINT32_BIT_COUNT (32U)
 
-uint32_t l_shift(uint32_t f_num, uint32_t s_num){
-	return f_num << s_num;
+calc_status_t l_shift(uint32_t f_num, uint32_t s_num, uint32_t * p_result)
+{
+	calc_status_t status = CALC_STATUS_OK;
+	
+	if (NULL == p_result)
+	{
+		status = CALC_STATUS_NULL_POINTER;
+	}
+	else if (UINT32_BIT_COUNT <= s_num)
+	{
+		status = CALC_STATUS_INVALID_SHIFT;
+	}
+	else
+	{
+		* p_result = f_num << s_num;
+	}
+
+	return status;
 }
 
-uint32_t r_shift(uint32_t f_num, uint32_t s_num){
-	return f_num >> s_num;
+calc_status_t r_shift(uint32_t f_num, uint32_t s_num, uint32_t * p_result)
+
+	calc_status_t status = CALC_STATUS_OK;
+
+	if (NULL == p_result)
+	{
+		status = CALC_STATUS_NULL_POINTER;
+	}
+	else if (UINT32_BIT_COUNT <= s_num)
+	{
+		status = CALC_STATUS_INVALID_SHIFT;
+	}
+	else
+	{
+		* p_result = f_num >> s_num;
+	}
+
+	return status;
 }
 
-uint32_t op_and(uint32_t f_num, uint32_t s_num){
-	return f_num & s_num;
+calc_status_t op_and(uint32_t f_num, uint32_t s_num, uint32_t * p_result)
+{
+	calc_status_t status = CALC_STATUS_OK;
+
+	if (NULL == p_result)
+	{
+		status = CALC_STATUS_NULL_POINTER;
+	}
+	else
+	{
+		* p_result = f_num & s_num;
+	}
+
+	return status;
 }
 
-uint32_t op_or(uint32_t f_num, uint32_t s_num){
-	return f_num | s_num;
+calc_status_t op_or(uint32_t f_num, uint32_t s_num, uint32_t * p_result)
+{
+	calc_status_t status = CALC_STATUS_OK;
+
+	if (NULL == p_result)
+	{
+		status = CALC_STATUS_NULL_POINTER;
+	}
+	else
+	{
+		* p_result = f_num | s_num;
+	}
+
+	return status;
 }
 
-uint32_t op_xor(uint32_t f_num, uint32_t s_num){
-	return f_num ^ s_num;
+calc_status_t op_xor(uint32_t f_num, uint32_t s_num, uint32_t * p_result)
+{
+	calc_status_t status = CALC_STATUS_OK;
+
+	if (NULL == p_result)
+	{
+		status = CALC_STATUS_NULL_POINTER;
+	}
+	else
+	{
+		* p_result = f_num ^ s_num;
+	}
+
+	return status;
 }
 
-uint32_t l_rotate(uint32_t f_num, uint32_t s_num){
-	s_num = s_num % 32;
-	return (f_num << s_num) | (f_num >> (32 - s_num));
+calc_status_t l_rotate(uint32_t f_num, uint32_t s_num, uint32_t * p_result)
+{
+	calc_status_t status = CALC_STATUS_OK;
+	uint32_t num_of_rotations;
+
+	if (NULL == p_result)
+	{
+		status = CALC_STATUS_NULL_POINTER;
+	}
+	else
+	{
+		num_of_rotations = s_num % UINT32_BIT_COUNT;
+
+		if (ZERO_UNSIGNED == num_of_rotations)
+		{
+			* p_result = f_num;
+		}
+		else
+		{
+			* p_result = (f_num << num_of_rotations) |
+						 (f_num >> (UINT32_BIT_COUNT - num_of_rotations));
+		}
+	}
+
+	return status;
 }
 
-uint32_t r_rotate(uint32_t f_num, uint32_t s_num){
-	s_num = s_num % 32;
-	return (f_num >> s_num) | (f_num << (32 - s_num));
+calc_status_t r_rotate(uint32_t f_num, uint32_t s_num, uint32_t * p_result)
+{
+	calc_status_t status = CALC_STATUS_OK;
+	uint32_t num_of_rotations;
+
+	if (NULL == p_result)
+	{
+		status = CALC_STATUS_NULL_POINTER;
+	}
+	else
+	{
+		num_of_rotations = s_num % UINT32_BIT_COUNT;
+
+		if (ZERO_UNSIGNED == num_of_rotations)
+		{
+			* p_result = f_num;
+		}
+		else
+		{
+			* p_result = (f_num >> num_of_rotations) |
+						 (f_num << (UINT32_BIT_COUNT - num_of_rotations));
+		}
+	}
+
+	return status;
 }
+
+/*** end of the file ***/
