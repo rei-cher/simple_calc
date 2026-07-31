@@ -2,6 +2,7 @@
 #include "bit_operations.h"
 
 // TODO: edge cases for shifts and rotations
+// edge cases and integer overflow/undeflow for all operations
 
 uint32_t l_shift(uint32_t f_num, uint32_t s_num){
 	return f_num << s_num;

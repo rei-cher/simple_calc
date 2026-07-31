@@ -1,32 +1,117 @@
+/** @file calc_operations.c
+ *
+ * @brief Perform basic arithmetic operations
+ */
+
 #include <stdint.h>
 #include "calc_operations.h"
 
-int32_t add(int32_t f_num, int32_t s_num){
-	return f_num + s_num;
-}
+calc_status_t add(int32_t f_num, int32_t s_num, int32_t * result){
+	calc_status_t status = CALC_STATUS_OK;
 
-int32_t subtract(int32_t f_num, int32_t s_num){
-	return f_num - s_num;
-}
-
-int32_t multiply(int32_t f_num, int32_t s_num){
-	return f_num * s_num;
-}
-
-int32_t divide(int32_t f_num, int32_t s_num, int32_t *result){
-	if (0 == s_num){
-		return 1;
+	if (NULL == result)
+	{
+		status = CALC_STATUS_NULL_POINTER;
+	}
+	else if (((0 < s_num) && ((INT32_MAX - s_num) < f_num)) ||
+			 ((0 > s_num) && ((INT32_MAX -s_num) > f_num)))
+	{
+		status = CALC_STATUS_OVERFLOW;
+	}
+	else
+	{
+		* result = f_num + s_num;
 	}
 
-	*result = f_num / s_num;
-	return 0;
+	return result;
 }
 
-int32_t modulo(int32_t f_num, int32_t s_num, int32_t *result){
-	if (0 == s_num){
-		return 1;
+calc_status_t subtract(int32_t f_num, int32_t s_num, int32_t * result){
+	calc_status_t status = CALS_STATUS_OK;
+
+	if (NULL == result)
+	{
+		status = CALC_STATUS_NULL_POINTER;
+	}
+	else if (((0 < s_num) && ((INT32_MAX + s_num) > f_num)) ||
+		   	 ((0 > s_num) && ((INT32_MAX + s_num) < f_num)))
+	{
+		status = CALC_STATUS_OVERFLOW;
+	}
+	else
+	{
+		* result = f_num - s_num;
 	}
 
-	*result = f_num % s_num;
-	return 0;
+	return result;
 }
+
+calc_status_t multiply(int32_t f_num, int32_t s_num){
+	calc_status_t status = CALS_STATUS_OK;
+
+	if (NULL == result)
+	{
+		status = CALC_STATUS_NULL_POINTER;
+	}
+	else if (((-1 == f_num) && (INT32_MIN == s_num)) ||
+			 ((-1 == s_num) && (INT32_MIN == f_num)) ||
+			 ((0 < f_num) && (0 < s_num) && ((INT32_MAX / s_num) < f_num)) ||
+			 ((0 < f_num) && (0 > s_num) && ((INT32_MAX / f_num) > s_num)) ||
+			 ((0 > f_num) && (0 < s_num) && ((INT32_MAX / s_num) > f_num)) ||
+			 ((0 > f_num) && (0 > s_num) && ((INT32_MAX / s_num) > f_num)))
+	{
+		status = CALC_STATUS_OVERFLOW;
+	}
+	else
+	{
+		* result = f_num * s_num;
+	}
+
+	return result;
+}
+
+calc_status_t divide(int32_t f_num, int32_t s_num, int32_t *result){
+	calc_status_t status = CALS_STATUS_OK;
+
+	if (NULL == result)
+	{
+		status = CALC_STATUS_NULL_POINTER;
+	}
+	else if (0 == s_num){
+		printf("Error: can not divide by 0\n");
+		status = CALC_STATUS_DIVIDE_BY_ZERO;
+	}
+	else if ((INT32_MIN == f_num) && (-1 == s_num)){
+		status = CALC_STATUS_OVERFLOW;
+	}
+	else
+	{
+		* result = f_num / s_num;
+	}
+
+	return result;
+}
+
+calc_status_t modulo(int32_t f_num, int32_t s_num, int32_t *result){
+	calc_status_t status = CALS_STATUS_OK;
+
+	if (NULL == result)
+	{
+		status = CALC_STATUS_NULL_POINTER;
+	}
+	else if (0 == s_num){
+		printf("Error: can not divide by 0\n");
+		status = CALC_STATUS_DIVIDE_BY_ZERO;
+	}
+	else if ((INT32_MIN == f_num) && (-1 == s_num)){
+		status = CALC_STATUS_OVERFLOW;
+	}
+	else
+	{
+		* result = f_num % s_num;
+	}
+
+	return result;
+}
+
+/*** end of the file ***/
