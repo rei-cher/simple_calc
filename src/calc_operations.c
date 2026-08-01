@@ -4,14 +4,15 @@
  */
 
 #include <stdint.h>
+#include <stdio.h>
 #include "calc_status.h"
 #include "calc_operations.h"
 
-calc_status_t add(int32_t f_num, int32_t s_num, int32_t * result)
+calc_status_t add(int32_t f_num, int32_t s_num, int32_t * p_result)
 {
 	calc_status_t status = CALC_STATUS_OK;
 
-	if (NULL == result)
+	if (NULL == p_result)
 	{
 		status = CALC_STATUS_NULL_POINTER;
 	}
@@ -22,17 +23,17 @@ calc_status_t add(int32_t f_num, int32_t s_num, int32_t * result)
 	}
 	else
 	{
-		* result = f_num + s_num;
+		* p_result = f_num + s_num;
 	}
 
-	return result;
+	return status;
 }
 
-calc_status_t subtract(int32_t f_num, int32_t s_num, int32_t * result)
+calc_status_t subtract(int32_t f_num, int32_t s_num, int32_t * p_result)
 {
-	calc_status_t status = CALS_STATUS_OK;
+	calc_status_t status = CALC_STATUS_OK;
 
-	if (NULL == result)
+	if (NULL == p_result)
 	{
 		status = CALC_STATUS_NULL_POINTER;
 	}
@@ -43,17 +44,17 @@ calc_status_t subtract(int32_t f_num, int32_t s_num, int32_t * result)
 	}
 	else
 	{
-		* result = f_num - s_num;
+		* p_result = f_num - s_num;
 	}
 
-	return result;
+	return status;
 }
 
-calc_status_t multiply(int32_t f_num, int32_t s_num)
+calc_status_t multiply(int32_t f_num, int32_t s_num, int32_t * p_result)
 {
-	calc_status_t status = CALS_STATUS_OK;
+	calc_status_t status = CALC_STATUS_OK;
 
-	if (NULL == result)
+	if (NULL == p_result)
 	{
 		status = CALC_STATUS_NULL_POINTER;
 	}
@@ -68,17 +69,17 @@ calc_status_t multiply(int32_t f_num, int32_t s_num)
 	}
 	else
 	{
-		* result = f_num * s_num;
+		* p_result = f_num * s_num;
 	}
 
-	return result;
+	return status;
 }
 
-calc_status_t divide(int32_t f_num, int32_t s_num, int32_t *result)
+calc_status_t divide(int32_t f_num, int32_t s_num, int32_t *p_result)
 {
-	calc_status_t status = CALS_STATUS_OK;
+	calc_status_t status = CALC_STATUS_OK;
 
-	if (NULL == result)
+	if (NULL == p_result)
 	{
 		status = CALC_STATUS_NULL_POINTER;
 	}
@@ -91,17 +92,17 @@ calc_status_t divide(int32_t f_num, int32_t s_num, int32_t *result)
 	}
 	else
 	{
-		* result = f_num / s_num;
+		* p_result = f_num / s_num;
 	}
 
-	return result;
+	return status;
 }
 
-calc_status_t modulo(int32_t f_num, int32_t s_num, int32_t *result)
+calc_status_t modulo(int32_t f_num, int32_t s_num, int32_t *p_result)
 {
-	calc_status_t status = CALS_STATUS_OK;
+	calc_status_t status = CALC_STATUS_OK;
 
-	if (NULL == result)
+	if (NULL == p_result)
 	{
 		status = CALC_STATUS_NULL_POINTER;
 	}
@@ -114,10 +115,10 @@ calc_status_t modulo(int32_t f_num, int32_t s_num, int32_t *result)
 	}
 	else
 	{
-		* result = f_num % s_num;
+		* p_result = f_num % s_num;
 	}
 
-	return result;
+	return status;
 }
 
 /*** end of the file ***/

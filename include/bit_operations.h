@@ -20,4 +20,4 @@ calc_status_t r_rotate(uint32_t f_num, uint32_t s_num, uint32_t * p_result);
 
 #endif
 
-/*** end of file ***/
+/*** end of the file ***/

@@ -5,10 +5,12 @@
  */
 
 #include <stdint.h>
+#include <stdio.h>
 #include "calc_status.h"
 #include "bit_operations.h"
 
 #define UINT32_BIT_COUNT (32U)
+#define ZERO_UNSIGNED (0U)
 
 calc_status_t l_shift(uint32_t f_num, uint32_t s_num, uint32_t * p_result)
 {
@@ -31,7 +33,7 @@ calc_status_t l_shift(uint32_t f_num, uint32_t s_num, uint32_t * p_result)
 }
 
 calc_status_t r_shift(uint32_t f_num, uint32_t s_num, uint32_t * p_result)
-
+{
 	calc_status_t status = CALC_STATUS_OK;
 
 	if (NULL == p_result)

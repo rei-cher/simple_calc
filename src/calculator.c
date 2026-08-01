@@ -1,199 +1,568 @@
+/** @file calculator.c
+ *
+ * @brief Main program flow controls
+ *
+ */
+
+#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdint.h>
 #include <string.h>
-#include "calculator.h"
-#include "calc_operations.h"
+#include <errno.h>
+
 #include "bit_operations.h"
+#include "calc_operations.h"
+#include "calc_status.h"
+#include "calculator.h"
 
-// union statement to manage both signed and unsigned types
-typedef union {
-	int32_t signed_value;
-	uint32_t unsigned_value;
-} number_t;
+#define FIRST_CHARACTER 0
 
-static void usage(const char *name){
+static calc_status_t parse_signed_integer(const char * p_input, int32_t * p_value)
+{
+	calc_status_t status = CALC_STATUS_OK;
+
+	char * p_end = NULL;
+	long long parsed_value = 0LL;
+
+	if ((NULL == p_input) || (NULL == p_value))
+	{
+		status = CALC_STATUS_NULL_POINTER;
+	}
+	else
+	{
+		errno = 0;
+
+		parsed_value = strtoll(p_input, &p_end, 10);
+
+		if((p_end == p_input) || ('\0' != * p_end))
+		{
+			status = CALC_STATUS_INVALID_INTEGER;
+		}
+		else if ((ERANGE == errno) || 
+				 (parsed_value < (long long)INT32_MIN) ||
+				 (parsed_value > (long long)INT32_MAX))
+		{
+			status = CALC_STATUS_INTEGER_OUT_OF_RANGE;
+		}
+		else
+		{
+			* p_value = (int32_t)parsed_value;
+		}
+	}
+
+	return status;
+}
+
+static calc_status_t parse_unsigned_integer(const char * p_input, uint32_t * p_value)
+{
+	calc_status_t status = CALC_STATUS_OK;
+
+	char * p_end = NULL;
+	unsigned long long parsed_value = 0ULL;
+
+	if ((NULL == p_input) || (NULL == p_value))
+	{
+		status = CALC_STATUS_NULL_POINTER;
+	}
+	else if ('-' == p_input[FIRST_CHARACTER])
+	{
+		status = CALC_STATUS_INTEGER_OUT_OF_RANGE;
+	}
+	else
+	{
+		errno = 0;
+
+		parsed_value = strtoull(p_input, &p_end, 10);
+
+		if((p_end == p_input) || ('\0' != * p_end))
+		{
+			status = CALC_STATUS_INVALID_INTEGER;
+		}
+		else if ((ERANGE == errno) || 
+				 (parsed_value > (unsigned long long)UINT32_MAX))
+		{
+			status = CALC_STATUS_INTEGER_OUT_OF_RANGE;
+		}
+		else
+		{
+			* p_value = (int32_t)parsed_value;
+		}
+	}
+
+	return status;
+}
+
+static calc_status_t validate_signed_integers(const char * p_f_input,
+											  const char * p_s_input,
+											  integer_t * p_f_integer,
+											  integer_t * p_s_integer)
+{
+	calc_status_t status = CALC_STATUS_OK;
+
+	int32_t f_value = 0;
+	int32_t s_value = 0;
+
+	if ((NULL == p_f_input) || (NULL == p_s_input) ||
+		(NULL == p_f_integer) || (NULL == p_s_integer))
+	{
+		status = CALC_STATUS_NULL_POINTER;
+	}
+
+	if (CALC_STATUS_OK == status)
+	{
+		status = parse_signed_integer(p_f_input, &f_value);
+	}
+	
+	if (CALC_STATUS_OK == status)
+	{
+		status = parse_signed_integer(p_s_input, &s_value);
+	}
+
+	if (CALC_STATUS_OK == status)
+	{
+		p_f_integer->type = INTEGER_TYPE_SIGNED;
+		p_f_integer->value.signed_value = f_value;
+
+		p_s_integer->type = INTEGER_TYPE_SIGNED;
+		p_s_integer->value.signed_value = s_value;
+	}
+
+	return status;
+
+}
+
+static calc_status_t validate_unsigned_integers(const char * p_f_input,
+											  const char * p_s_input,
+											  integer_t * p_f_integer,
+											  integer_t * p_s_integer)
+{
+	calc_status_t status = CALC_STATUS_OK;
+
+	uint32_t f_value = 0U;
+	uint32_t s_value = 0U;
+
+	if ((NULL == p_f_input) || (NULL == p_s_input) ||
+		(NULL == p_f_integer) || (NULL == p_s_integer))
+	{
+		status = CALC_STATUS_NULL_POINTER;
+	}
+
+	if (CALC_STATUS_OK == status)
+	{
+		status = parse_unsigned_integer(p_f_input, &f_value);
+	}
+	
+	if (CALC_STATUS_OK == status)
+	{
+		status = parse_unsigned_integer(p_s_input, &s_value);
+	}
+
+	if (CALC_STATUS_OK == status)
+	{
+		p_f_integer->type = INTEGER_TYPE_UNSIGNED;
+		p_f_integer->value.unsigned_value = f_value;
+
+		p_s_integer->type = INTEGER_TYPE_UNSIGNED;
+		p_s_integer->value.unsigned_value = s_value;
+	}
+
+	return status;
+}
+
+void print_usage(const char * p_name)
+{
 	printf("Incorrect supply of arguments.\n");
-	printf("Usage: %s <number> <operator> <number>\n", name);
-	printf("Arithmetic operators: + - * / %\n");
+	printf("Usage: %s <number> <operator> <number>\n", p_name);
+	printf("Arithmetic operators: + - * / %%\n");
 	printf("Bitwise operators: & | ^ << >> <<< >>>\n");
 }
 
-// ------OPERATORS-------
-// determine either to use signed or unsigned int32_t
-static int is_calc_op(const char *op){
-	return 0 == strcmp(op, "+") || 0 == strcmp(op, "-") || 0 == strcmp(op, "*") || 0 == strcmp(op, "/") || 0 == strcmp(op, "%");
+void print_error(calc_status_t status)
+{
+	switch (status)
+	{
+		case CALC_STATUS_INVALID_OPERATOR:
+			printf("Error: unsupported operator\n");
+			break;
+
+		case CALC_STATUS_INVALID_INTEGER:
+		   printf("Error: invalid integer type\n");
+	   	   break;
+
+		case CALC_STATUS_INTEGER_OUT_OF_RANGE:
+		   printf("Error: integer is out of the range\n");
+		   break;
+
+		case CALC_STATUS_DIVIDE_BY_ZERO:
+		   printf("Error: division or modulo by zero\n");
+		   break;
+
+		case CALC_STATUS_OVERFLOW:
+		   printf("Error: overflow or underflow\n");
+		   break;
+
+		case CALC_STATUS_INVALID_SHIFT:
+		   printf("Error: shift should be in range from 0 to 31\n");
+		   break;
+
+		case CALC_STATUS_NULL_POINTER:
+		   printf("Error: null pointer\n");
+		   break;
+		
+		case CALC_STATUS_OK:
+		   break;
+
+		default:
+		   printf("Error: unknown error\n");
+		   break;
+	}
 }
 
-static int is_bit_op(const char *op){
-	return 0 == strcmp(op, "&") || 0 == strcmp(op, "|") || 0 == strcmp(op, "^") || 0 == strcmp(op, "<<") || 0 == strcmp(op, ">>") || 0 == strcmp(op, "<<<") || 0 == strcmp(op, ">>>");
+void print_result(const integer_t * p_result)
+{
+	if (INTEGER_TYPE_SIGNED == p_result->type)
+	{
+		printf("%d\n", p_result->value.signed_value);
+	}
+	else
+	{
+		printf("%u\n", p_result->value.unsigned_value);
+	}
 }
 
+calc_status_t get_operator(const char * p_operator_string,
+						   operator_t * p_operator)
+{
+	calc_status_t status = CALC_STATUS_OK;
 
-// -------VALIDATIONS---------
-// input validation functions
-// handle bad inputs, integer overflow, etc
-// usigned int should not be negative (it is never negative)
+	if ((NULL == p_operator_string) || (NULL == p_operator))
+	{
+		status = CALC_STATUS_NULL_POINTER;
+	}
+		
+	if (CALC_STATUS_OK == status)
+	{
+		switch (p_operator_string[FIRST_CHARACTER])
+		{
+			case '+':
+				if ('\0' == p_operator_string[FIRST_CHARACTER+1])
+				{
+					* p_operator = OPERATOR_ADD;
+				}
+				else
+				{
+					status = CALC_STATUS_INVALID_OPERATOR;
+				}
+				break;
 
-static int validate_int32(const char *argv, int32_t *converted_argv){
-	long long num;
-	char *end_ptr = NULL;
+			case '-':
+				if ('\0' == p_operator_string[FIRST_CHARACTER+1])
+				{
+					* p_operator = OPERATOR_SUBTRACT;
+				}
+				else
+				{
+					status = CALC_STATUS_INVALID_OPERATOR;
+				}
+				break;
+			
+			case '*':
+				if ('\0' == p_operator_string[FIRST_CHARACTER+1])
+				{
+					* p_operator = OPERATOR_MULTIPLY;
+				}
+				else
+				{
+					status = CALC_STATUS_INVALID_OPERATOR;
+				}
+				break;
+			
+			case '/':
+				if ('\0' == p_operator_string[FIRST_CHARACTER+1])
+				{
+					* p_operator = OPERATOR_DIVIDE;
+				}
+				else
+				{
+					status = CALC_STATUS_INVALID_OPERATOR;
+				}
+				break;
+			
+			case '%':
+				if ('\0' == p_operator_string[FIRST_CHARACTER+1])
+				{
+					* p_operator = OPERATOR_MODULO;
+				}
+				else
+				{
+					status = CALC_STATUS_INVALID_OPERATOR;
+				}
+				break;
 
-	num = strtoll(argv, &end_ptr, 10);
+			case '&':
+				if ('\0' == p_operator_string[FIRST_CHARACTER+1])
+				{
+					* p_operator = OPERATOR_AND;
+				}
+				else
+				{
+					status = CALC_STATUS_INVALID_OPERATOR;
+				}
+				break;
 
-	// out of boundary check
-	if (INT32_MIN > num || INT32_MAX < num){
-		return 1;
+			case '|':
+				if ('\0' == p_operator_string[FIRST_CHARACTER+1])
+				{
+					* p_operator = OPERATOR_OR;
+				}
+				else
+				{
+					status = CALC_STATUS_INVALID_OPERATOR;
+				}
+				break;
+			
+			case '^':
+				if ('\0' == p_operator_string[FIRST_CHARACTER+1])
+				{
+					* p_operator = OPERATOR_XOR;
+				}
+				else
+				{
+					status = CALC_STATUS_INVALID_OPERATOR;
+				}
+				break;
+			
+			case '>':
+				if (0 == strcmp(p_operator_string, ">>"))
+				{
+					* p_operator = OPERATOR_RIGHT_SHIFT;
+				}
+				else if (0 == strcmp(p_operator_string, ">>>"))
+				{
+					* p_operator = OPERATOR_RIGHT_ROTATE;
+				}
+				else
+				{
+					status = CALC_STATUS_INVALID_OPERATOR;
+				}
+
+				break;
+			
+			case '<':
+				if (0 == strcmp(p_operator_string, "<<"))
+				{
+					* p_operator = OPERATOR_LEFT_SHIFT;
+				}
+				else if (0 == strcmp(p_operator_string, "<<<"))
+				{
+					* p_operator = OPERATOR_LEFT_ROTATE;
+				}
+				else
+				{
+					status = CALC_STATUS_INVALID_OPERATOR;
+				}
+
+				break;
+		}	
 	}
 
-	*converted_argv = (int32_t)num;
-
-	return 0;
+	return status;
 }
 
-static int validate_uint32(const char *argv, uint32_t *converted_argv){
-	unsigned long long num;
-	char *end_ptr = NULL;
+integer_type_t get_integer_type(operator_t operator)
+{
+	integer_type_t integer_type = INTEGER_TYPE_SIGNED;
 
-	// check if user's tryes to provide negative number for bitwise operations
-	if ('-' == argv[0]){
-		printf("Can not accept negative number for bitwise operations\n");
-		return 1;
+	switch (operator)
+	{
+		case OPERATOR_AND:
+		case OPERATOR_OR:
+		case OPERATOR_XOR:
+		case OPERATOR_LEFT_SHIFT:
+		case OPERATOR_LEFT_ROTATE:
+		case OPERATOR_RIGHT_SHIFT:
+		case OPERATOR_RIGHT_ROTATE:
+			integer_type = INTEGER_TYPE_UNSIGNED;
+			break;
+
+		case OPERATOR_ADD:
+		case OPERATOR_SUBTRACT:
+		case OPERATOR_MULTIPLY:
+		case OPERATOR_MODULO:
+		case OPERATOR_DIVIDE:
+		default:
+			integer_type = INTEGER_TYPE_SIGNED;
+			break;
+
 	}
 
-	// check if the uint32_t within the range of 0 and UINT32_MAX
-	num = strtoull(argv, &end_ptr, 10); 
-	if (UINT32_MAX < num){
-		printf("Number is out-of-boundary: %s\n", argv);
-		return 1;
-	}
-
-	*converted_argv = (uint32_t)num;
-
-	return 0;
+	return integer_type;
 }
 
-int start(int argc, char *argv[]){
-	char *op;
+calc_status_t validate_integers(const char * p_f_input,
+								const char * p_s_input,
+								integer_type_t integer_type,
+								integer_t * p_f_integer,
+								integer_t * p_s_integer)
+{
+	calc_status_t status = CALC_STATUS_OK;
 
-	// check if all 3 arguments were supplied
-	if (4 != argc){
-		usage(argv[0]);
-		return 1;
+	if ((NULL == p_f_input) || (NULL == p_s_input) ||
+		(NULL == p_f_integer) || (NULL == p_s_integer))
+	{
+		status = CALC_STATUS_NULL_POINTER;
 	}
 	
-	op = argv[2];
-
-	// check if the operator is valid
-	if (!is_calc_op(op) && !is_bit_op(op)) { 
-		printf("Error: incorrect operator '%s'.\n", op);
-		usage(argv[0]);
-		return 1;
+	if (INTEGER_TYPE_SIGNED == integer_type)
+	{
+		status = validate_signed_integers(p_f_input, 
+										  p_s_input,
+										  p_f_integer,
+										  p_s_integer);
+	}
+	else if (INTEGER_TYPE_UNSIGNED == integer_type)
+	{
+		status = validate_unsigned_integers(p_f_input,
+											p_s_input,
+											p_f_integer,
+											p_s_integer);
+	}
+	else
+	{
+		status = CALC_STATUS_INVALID_INTEGER_TYPE;
 	}
 
-	// check what type to use for int32_t
-	// validate user's input
-	if (is_calc_op(op)){
-		if (0 != validate_int32(argv[1], &f_num.signed_value) || 0 != validate_int32(argv[3], &s_num.signed_value)){
-			printf("Error: must use int32_t in arithmetic operations\n");
-			return 1;
-		}
-	}
-	else {
-		if (0 != validate_uint32(argv[1], &f_num.unsigned_value) || 0 != validate_uint32(argv[3], &s_num.unsigned_value)){
-			printf("Error: must use uint32_t in bitwise operations\n");
-			return 1;
-		}
-	}
+	return status;
 
-	switch (op[0]){
-		case '+':
-			if (0 < s_num.signed_value && INT32_MAX - s_num.signed_value < f_num.signed_value){
-				printf("Error: result of addition is exceeded the size of int32_t\n");
-				return 1;
-			}
-			else if (0 > s_num.signed_value && INT32_MAX - s_num.signed_value > f_num.signed_value){
-				printf("Error: result of addition is exceeded the size of int32_t\n");
-				return 1;
-			}
 
-			printf("%d\n", add(f_num.signed_value, s_num.signed_value));
-			break;
-		case '-':
-			if (0 < s_num.signed_value && INT32_MAX + s_num.signed_value > f_num.signed_value){
-				printf("Error: result of subtraction is exceeded the size of int32_t\n");
-				return 1;
-			}
-			else if (0 > s_num.signed_value && INT32_MAX + s_num.signed_value < f_num.signed_value){
-				printf("Error: result of subtraction is exceeded the size of int32_t\n");
-				return 1;
-			}
-
-			printf("%d\n", subtract(f_num.signed_value, s_num.signed_value));
-			break;
-		case '*':
-			if (INT32_MAX / s_num.signed_value > f_num.signed_value){
-				printf("Error: result of mulriplication is exceeded the size of int32_t\n");
-				return 1;
-			}
-
-			printf("%d\n", multiply(f_num.signed_value, s_num.signed_value));
-			break;
-		case '/':
-			if (0 != divide(f_num.signed_value, s_num.signed_value, &result.signed_value)) {
-				printf("Error: can not divide by 0.\n");
-				return 1;
-			}
-
-			printf("%d\n", result.signed_value);
-			break;
-		case '%':
-			if (0 != modulo(f_num.signed_value, s_num.signed_value, &result.signed_value)) {
-				printf("Error: can not perform modulo by 0.\n");
-				return 1;
-			}
-
-			printf("%d\n", result.signed_value);
-			break;
-		case '&':
-			printf("%u\n", op_and(f_num.unsigned_value, s_num.unsigned_value));
-			break;
-		case '|':
-			printf("%u\n", op_or(f_num.unsigned_value, s_num.unsigned_value));
-			break;
-		case '^':
-			printf("%u\n", op_xor(f_num.unsigned_value, s_num.unsigned_value));
-			break;
-		case '<':
-			if (0 == strcmp(op, "<<")){
-				printf("%u\n", l_shift(f_num.unsigned_value, s_num.unsigned_value));
-			}
-			else if (0 == strcmp(op, "<<<")){
-				printf("%u\n", l_rotate(f_num.unsigned_value, s_num.unsigned_value));
-			}
-			else {
-				printf("Error: incorrect operator.\n");
-				usage(argv[0]);
-				return 1;
-			}
-			break;
-		case '>':
-			if (0 == strcmp(op, ">>")){
-				printf("%u\n", r_shift(f_num.unsigned_value, s_num.unsigned_value));
-			}
-			else if (0 == strcmp(op, ">>>")){
-				printf("%u\n", r_shift(f_num.unsigned_value, s_num.unsigned_value));
-			}
-			else {
-				printf("Error: incorrect operator.\n");
-				usage(argv[0]);
-				return 1;
-			}
-			break;
-		default:
-			printf("Error: unsupported operator");
-			return 1;
-	}
-
-	return 0;
 }
+
+calc_status_t calculate_result(operator_t operator,
+							   const integer_t * p_f_integer,
+							   const integer_t * p_s_integer,
+							   integer_t * p_result)
+{
+	calc_status_t status = CALC_STATUS_OK;
+	integer_type_t result_type = INTEGER_TYPE_SIGNED;
+
+	if ((NULL == p_f_integer) || (NULL == p_s_integer) || (NULL == p_result))
+	{
+		status = CALC_STATUS_NULL_POINTER;
+	}
+
+	if (CALC_STATUS_OK == status)
+	{
+		switch (operator)
+		{
+			case OPERATOR_ADD:
+				result_type = INTEGER_TYPE_SIGNED;
+				status = add (
+						p_f_integer->value.signed_value,
+						p_s_integer->value.signed_value,
+						&p_result->value.signed_value);
+				break;
+		
+			case OPERATOR_SUBTRACT:
+				result_type = INTEGER_TYPE_SIGNED;
+				status = subtract (
+						p_f_integer->value.signed_value,
+						p_s_integer->value.signed_value,
+						&p_result->value.signed_value);
+				break;
+			
+			case OPERATOR_MULTIPLY:
+				result_type = INTEGER_TYPE_SIGNED;
+				status = multiply (
+						p_f_integer->value.signed_value,
+						p_s_integer->value.signed_value,
+						&p_result->value.signed_value);
+				break;
+			
+			case OPERATOR_DIVIDE:
+				result_type = INTEGER_TYPE_SIGNED;
+				status = divide (
+						p_f_integer->value.signed_value,
+						p_s_integer->value.signed_value,
+						&p_result->value.signed_value);
+				break;
+			
+			case OPERATOR_MODULO:
+				result_type = INTEGER_TYPE_SIGNED;
+				status = modulo (
+						p_f_integer->value.signed_value,
+						p_s_integer->value.signed_value,
+						&p_result->value.signed_value);
+				break;
+			
+			case OPERATOR_AND:
+				result_type = INTEGER_TYPE_UNSIGNED;
+				status = op_and (
+						p_f_integer->value.unsigned_value,
+						p_s_integer->value.unsigned_value,
+						&p_result->value.unsigned_value);
+				break;
+			
+			case OPERATOR_OR:
+				result_type = INTEGER_TYPE_UNSIGNED;
+				status = op_or (
+						p_f_integer->value.unsigned_value,
+						p_s_integer->value.unsigned_value,
+						&p_result->value.unsigned_value);
+				break;
+			
+			case OPERATOR_XOR:
+				result_type = INTEGER_TYPE_UNSIGNED;
+				status = op_xor (
+						p_f_integer->value.unsigned_value,
+						p_s_integer->value.unsigned_value,
+						&p_result->value.unsigned_value);
+				break;
+			
+			case OPERATOR_LEFT_SHIFT:
+				result_type = INTEGER_TYPE_UNSIGNED;
+				status = l_shift (
+						p_f_integer->value.unsigned_value,
+						p_s_integer->value.unsigned_value,
+						&p_result->value.unsigned_value);
+				break;
+			
+			case OPERATOR_RIGHT_SHIFT:
+				result_type = INTEGER_TYPE_UNSIGNED;
+				status = r_shift (
+						p_f_integer->value.unsigned_value,
+						p_s_integer->value.unsigned_value,
+						&p_result->value.unsigned_value);
+				break;
+			
+			case OPERATOR_LEFT_ROTATE:
+				result_type = INTEGER_TYPE_UNSIGNED;
+				status = l_rotate (
+						p_f_integer->value.unsigned_value,
+						p_s_integer->value.unsigned_value,
+						&p_result->value.unsigned_value);
+				break;
+			
+			case OPERATOR_RIGHT_ROTATE:
+				result_type = INTEGER_TYPE_UNSIGNED;
+				status = r_rotate (
+						p_f_integer->value.unsigned_value,
+						p_s_integer->value.unsigned_value,
+						&p_result->value.unsigned_value);
+				break;
+
+			default:
+				status = CALC_STATUS_INVALID_OPERATOR;
+				break;
+		}
+
+		if (CALC_STATUS_OK == status)
+		{
+			p_result->type = result_type;
+		}
+	}
+
+	return status;
+}
+
+
+/*** end of the file ***/
