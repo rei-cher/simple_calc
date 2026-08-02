@@ -17,7 +17,7 @@ calc_status_t add(int32_t f_num, int32_t s_num, int32_t * p_result)
 		status = CALC_STATUS_NULL_POINTER;
 	}
 	else if (((0 < s_num) && ((INT32_MAX - s_num) < f_num)) ||
-			 ((0 > s_num) && ((INT32_MAX -s_num) > f_num)))
+			 ((0 > s_num) && ((INT32_MIN -s_num) > f_num)))
 	{
 		status = CALC_STATUS_OVERFLOW;
 	}

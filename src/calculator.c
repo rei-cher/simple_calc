@@ -363,6 +363,10 @@ calc_status_t get_operator(const char * p_operator_string,
 				}
 
 				break;
+
+			default:
+				status = CALC_STATUS_INVALID_OPERATOR;
+				break;
 		}	
 	}
 
