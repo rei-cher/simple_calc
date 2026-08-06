@@ -44,6 +44,7 @@ typedef struct
 	value_t	   value;
 } integer_t;
 
+// TODO: description for each public function
 calc_status_t get_operator(const char * p_operator_string,
 						   operator_t * p_operator);
 

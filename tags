@@ -136,6 +136,7 @@ $(VERBOSE)MAKESILENT	build/Makefile	/^$(VERBOSE)MAKESILENT = -s$/;"	m
 %	build/Makefile	/^% : SCCS\/s.%$/;"	t
 %	build/Makefile	/^% : s.%$/;"	t
 0	build/CMakeFiles/InstallScripts.json	/^		"\/home\/reicher\/Projects\/tool_dev_projects\/simple_calc\/build\/cmake_install.cmake"$/;"	s	array:InstallScripts
+1. Build	README.md	/^## 1. Build$/;"	s	chapter:Instruction
 ARCHITECTURE_ID	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^#   define ARCHITECTURE_ID /;"	d	file:
 ARCHITECTURE_ID	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^#  define ARCHITECTURE_ID /;"	d	file:
 ARCHITECTURE_ID	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^#  define ARCHITECTURE_ID$/;"	d	file:
@@ -289,12 +290,15 @@ C_VERSION	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^# define C_VER
 DEC	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^#define DEC(/;"	d	file:
 EQUALS	build/Makefile	/^EQUALS = =$/;"	m
 EXECUTABLE_NAME	CMakeLists.txt	/^set(EXECUTABLE_NAME  simplecalc)$/;"	v
+Execute	README.md	/^## Execute$/;"	s	chapter:Instruction
 FIRST_CHARACTER	src/calculator.c	/^#define FIRST_CHARACTER /;"	d	file:
 HEX	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^#define HEX(/;"	d	file:
 ID_VOID_MAIN	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^# define ID_VOID_MAIN$/;"	d	file:
 INTEGER_TYPE_SIGNED	include/calculator.h	/^	INTEGER_TYPE_SIGNED = 0,$/;"	e	enum:__anon4a5d91580203
 INTEGER_TYPE_UNSIGNED	include/calculator.h	/^	INTEGER_TYPE_UNSIGNED$/;"	e	enum:__anon4a5d91580203
 InstallScripts	build/CMakeFiles/InstallScripts.json	/^	"InstallScripts" : $/;"	a
+Instruction	README.md	/^# Instruction$/;"	c
+Note: Arithmetic operators: + - * / % and Bitwise operators: & | ^ << >> <<< >>>	README.md	/^#### Note: Arithmetic operators: + - * \/ % and Bitwise operators: & | ^ << >> <<< >>>$/;"	t	section:Instruction""Execute
 OPERATOR_ADD	include/calculator.h	/^	OPERATOR_ADD = 0,$/;"	e	enum:__anon4a5d91580103
 OPERATOR_AND	include/calculator.h	/^	OPERATOR_AND,$/;"	e	enum:__anon4a5d91580103
 OPERATOR_DIVIDE	include/calculator.h	/^	OPERATOR_DIVIDE,$/;"	e	enum:__anon4a5d91580103
@@ -327,8 +331,8 @@ SIMULATE_VERSION_PATCH	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^#
 SIMULATE_VERSION_PATCH	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^# define SIMULATE_VERSION_PATCH /;"	d	file:
 STRINGIFY	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^#define STRINGIFY(X) STRINGIFY_/;"	d	file:
 STRINGIFY_HELPER	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^#define STRINGIFY_HELPER(/;"	d	file:
-TODO: populate README	README.md	/^# TODO: populate README$/;"	c
 TODO: populate instructions	docs/simplecalc-instructions.md	/^# TODO: populate instructions $/;"	c
+Test Cases	README.md	/^### Test Cases$/;"	S	section:Instruction""Execute
 UINT32_BIT_COUNT	src/bit_operations.c	/^#define UINT32_BIT_COUNT /;"	d	file:
 USER_FIRST_INTEGER	src/main.c	/^#define USER_FIRST_INTEGER /;"	d	file:
 USER_OPERATOR	src/main.c	/^#define USER_OPERATOR /;"	d	file:
@@ -394,6 +398,7 @@ r_rotate	src/bit_operations.c	/^calc_status_t r_rotate(uint32_t f_num, uint32_t 
 r_shift	src/bit_operations.c	/^calc_status_t r_shift(uint32_t f_num, uint32_t s_num, uint32_t * p_result)$/;"	f	typeref:typename:calc_status_t
 rebuild_cache	build/Makefile	/^rebuild_cache:$/;"	t
 rebuild_cache/fast	build/Makefile	/^rebuild_cache\/fast: rebuild_cache$/;"	t
+run_test	test_cases.sh	/^run_test()$/;"	f
 signed_value	include/calculator.h	/^	int32_t signed_value;$/;"	m	union:__anon4a5d9158030a	typeref:typename:int32_t
 simple_calc	CMakeLists.txt	/^    simple_calc$/;"	p
 simplecalc	build/Makefile	/^simplecalc: cmake_check_build_system$/;"	t

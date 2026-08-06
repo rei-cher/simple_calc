@@ -7,6 +7,7 @@
 #include <stdlib.h>
 #include "calculator.h"
 
+// Move to calc.h
 #define REQUIRED_NUMBER_OF_ARGUMENTS 4
 #define PROGRAM_NAME 0
 #define USER_FIRST_INTEGER 1

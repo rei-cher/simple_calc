@@ -229,7 +229,7 @@ void print_result(const integer_t * p_result)
 		printf("%u\n", p_result->value.unsigned_value);
 	}
 }
-
+// TODO: nesting fix to multiple function
 calc_status_t get_operator(const char * p_operator_string,
 						   operator_t * p_operator)
 {
@@ -403,6 +403,8 @@ integer_type_t get_integer_type(operator_t operator)
 	return integer_type;
 }
 
+// TODO: if more than 4 parameters use struct
+// have a description for the struct
 calc_status_t validate_integers(const char * p_f_input,
 								const char * p_s_input,
 								integer_type_t integer_type,
