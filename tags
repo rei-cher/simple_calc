@@ -140,6 +140,9 @@ $(VERBOSE)MAKESILENT	build/Makefile	/^$(VERBOSE)MAKESILENT = -s$/;"	m
 ARCHITECTURE_ID	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^#   define ARCHITECTURE_ID /;"	d	file:
 ARCHITECTURE_ID	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^#  define ARCHITECTURE_ID /;"	d	file:
 ARCHITECTURE_ID	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^#  define ARCHITECTURE_ID$/;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^#   define ARCHITECTURE_ID /;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^#  define ARCHITECTURE_ID /;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^#  define ARCHITECTURE_ID$/;"	d	file:
 BIT_OPERATIONS_H	include/bit_operations.h	/^#define BIT_OPERATIONS_H$/;"	d
 CALCULATOR_H	include/calculator.h	/^#define CALCULATOR_H$/;"	d
 CALC_OPERATIONS_H	include/calc_operations.h	/^#define CALC_OPERATIONS_H$/;"	d
@@ -155,65 +158,116 @@ CALC_STATUS_NULL_POINTER	include/calc_status.h	/^	CALC_STATUS_NULL_POINTER,$/;"	
 CALC_STATUS_OK	include/calc_status.h	/^	CALC_STATUS_OK = 0,$/;"	e	enum:__anon93c894e40103
 CALC_STATUS_OVERFLOW	include/calc_status.h	/^	CALC_STATUS_OVERFLOW,$/;"	e	enum:__anon93c894e40103
 CMAKE_AR	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^set(CMAKE_AR "\/usr\/bin\/ar")$/;"	v
+CMAKE_AR	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^set(CMAKE_AR "\/usr\/bin\/ar")$/;"	v
 CMAKE_BINARY_DIR	build/Makefile	/^CMAKE_BINARY_DIR = \/home\/reicher\/Projects\/tool_dev_projects\/simple_calc\/build$/;"	m
 CMAKE_C11_COMPILE_FEATURES	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^set(CMAKE_C11_COMPILE_FEATURES "c_std_11;c_static_assert")$/;"	v
+CMAKE_C11_COMPILE_FEATURES	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^set(CMAKE_C11_COMPILE_FEATURES "c_std_11;c_static_assert")$/;"	v
 CMAKE_C17_COMPILE_FEATURES	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^set(CMAKE_C17_COMPILE_FEATURES "c_std_17")$/;"	v
+CMAKE_C17_COMPILE_FEATURES	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^set(CMAKE_C17_COMPILE_FEATURES "c_std_17")$/;"	v
 CMAKE_C23_COMPILE_FEATURES	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^set(CMAKE_C23_COMPILE_FEATURES "c_std_23")$/;"	v
+CMAKE_C23_COMPILE_FEATURES	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^set(CMAKE_C23_COMPILE_FEATURES "c_std_23")$/;"	v
 CMAKE_C90_COMPILE_FEATURES	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^set(CMAKE_C90_COMPILE_FEATURES "c_std_90;c_function_prototypes")$/;"	v
+CMAKE_C90_COMPILE_FEATURES	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^set(CMAKE_C90_COMPILE_FEATURES "c_std_90;c_function_prototypes")$/;"	v
 CMAKE_C99_COMPILE_FEATURES	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^set(CMAKE_C99_COMPILE_FEATURES "c_std_99;c_restrict;c_variadic_macros")$/;"	v
+CMAKE_C99_COMPILE_FEATURES	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^set(CMAKE_C99_COMPILE_FEATURES "c_std_99;c_restrict;c_variadic_macros")$/;"	v
 CMAKE_CL_SHOWINCLUDES_PREFIX	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^  set(CMAKE_CL_SHOWINCLUDES_PREFIX "${CMAKE_C_CL_SHOWINCLUDES_PREFIX}")$/;"	v
+CMAKE_CL_SHOWINCLUDES_PREFIX	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^  set(CMAKE_CL_SHOWINCLUDES_PREFIX "${CMAKE_C_CL_SHOWINCLUDES_PREFIX}")$/;"	v
 CMAKE_COMMAND	build/Makefile	/^CMAKE_COMMAND = \/usr\/bin\/cmake$/;"	m
 CMAKE_COMPILER_IS_GNUCC	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^set(CMAKE_COMPILER_IS_GNUCC 1)$/;"	v
+CMAKE_COMPILER_IS_GNUCC	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^set(CMAKE_COMPILER_IS_GNUCC 1)$/;"	v
 CMAKE_CROSSCOMPILING	build/CMakeFiles/4.4.0/CMakeSystem.cmake	/^set(CMAKE_CROSSCOMPILING "FALSE")$/;"	v
+CMAKE_CROSSCOMPILING	build/CMakeFiles/4.4.2/CMakeSystem.cmake	/^set(CMAKE_CROSSCOMPILING "FALSE")$/;"	v
 CMAKE_CROSSCOMPILING	build/cmake_install.cmake	/^  set(CMAKE_CROSSCOMPILING "FALSE")$/;"	v
 CMAKE_CXX_INCLUDE_REGEX_COMPLAIN	build/CMakeFiles/CMakeDirectoryInformation.cmake	/^set(CMAKE_CXX_INCLUDE_REGEX_COMPLAIN ${CMAKE_C_INCLUDE_REGEX_COMPLAIN})$/;"	v
 CMAKE_CXX_INCLUDE_REGEX_SCAN	build/CMakeFiles/CMakeDirectoryInformation.cmake	/^set(CMAKE_CXX_INCLUDE_REGEX_SCAN ${CMAKE_C_INCLUDE_REGEX_SCAN})$/;"	v
 CMAKE_C_ABI_COMPILED	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^set(CMAKE_C_ABI_COMPILED TRUE)$/;"	v
+CMAKE_C_ABI_COMPILED	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^set(CMAKE_C_ABI_COMPILED TRUE)$/;"	v
 CMAKE_C_BYTE_ORDER	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^set(CMAKE_C_BYTE_ORDER "LITTLE_ENDIAN")$/;"	v
+CMAKE_C_BYTE_ORDER	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^set(CMAKE_C_BYTE_ORDER "LITTLE_ENDIAN")$/;"	v
 CMAKE_C_CL_SHOWINCLUDES_PREFIX	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^set(CMAKE_C_CL_SHOWINCLUDES_PREFIX "")$/;"	v
+CMAKE_C_CL_SHOWINCLUDES_PREFIX	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^set(CMAKE_C_CL_SHOWINCLUDES_PREFIX "")$/;"	v
 CMAKE_C_COMPILER	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER "\/usr\/bin\/cc")$/;"	v
+CMAKE_C_COMPILER	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER "\/usr\/bin\/cc")$/;"	v
 CMAKE_C_COMPILER_ABI	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_ABI "ELF")$/;"	v
+CMAKE_C_COMPILER_ABI	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_ABI "ELF")$/;"	v
 CMAKE_C_COMPILER_APPLE_SYSROOT	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_APPLE_SYSROOT "")$/;"	v
+CMAKE_C_COMPILER_APPLE_SYSROOT	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_APPLE_SYSROOT "")$/;"	v
 CMAKE_C_COMPILER_AR	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_AR "\/usr\/bin\/gcc-ar")$/;"	v
+CMAKE_C_COMPILER_AR	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_AR "\/usr\/bin\/gcc-ar")$/;"	v
 CMAKE_C_COMPILER_ARCHITECTURE_ID	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_ARCHITECTURE_ID "x86_64")$/;"	v
+CMAKE_C_COMPILER_ARCHITECTURE_ID	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_ARCHITECTURE_ID "x86_64")$/;"	v
 CMAKE_C_COMPILER_ARG1	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_ARG1 "")$/;"	v
+CMAKE_C_COMPILER_ARG1	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_ARG1 "")$/;"	v
 CMAKE_C_COMPILER_ENV_VAR	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_ENV_VAR "CC")$/;"	v
+CMAKE_C_COMPILER_ENV_VAR	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_ENV_VAR "CC")$/;"	v
 CMAKE_C_COMPILER_FRONTEND_VARIANT	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_FRONTEND_VARIANT "GNU")$/;"	v
+CMAKE_C_COMPILER_FRONTEND_VARIANT	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_FRONTEND_VARIANT "GNU")$/;"	v
 CMAKE_C_COMPILER_ID	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_ID "GNU")$/;"	v
+CMAKE_C_COMPILER_ID	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_ID "GNU")$/;"	v
 CMAKE_C_COMPILER_ID_RUN	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_ID_RUN 1)$/;"	v
+CMAKE_C_COMPILER_ID_RUN	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_ID_RUN 1)$/;"	v
 CMAKE_C_COMPILER_LINKER	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_LINKER "\/usr\/bin\/ld")$/;"	v
+CMAKE_C_COMPILER_LINKER	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_LINKER "\/usr\/bin\/ld")$/;"	v
 CMAKE_C_COMPILER_LINKER_ARCHITECTURE_FLAGS	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_LINKER_ARCHITECTURE_FLAGS "-m;elf")$/;"	v
+CMAKE_C_COMPILER_LINKER_ARCHITECTURE_FLAGS	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_LINKER_ARCHITECTURE_FLAGS "-m;elf")$/;"	v
 CMAKE_C_COMPILER_LINKER_FRONTEND_VARIANT	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_LINKER_FRONTEND_VARIANT "GNU")$/;"	v
+CMAKE_C_COMPILER_LINKER_FRONTEND_VARIANT	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_LINKER_FRONTEND_VARIANT "GNU")$/;"	v
 CMAKE_C_COMPILER_LINKER_ID	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_LINKER_ID "GNU")$/;"	v
+CMAKE_C_COMPILER_LINKER_ID	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_LINKER_ID "GNU")$/;"	v
 CMAKE_C_COMPILER_LINKER_VERSION	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_LINKER_VERSION "2.46.1")$/;"	v
+CMAKE_C_COMPILER_LINKER_VERSION	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_LINKER_VERSION "2.47")$/;"	v
 CMAKE_C_COMPILER_LOADED	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_LOADED 1)$/;"	v
+CMAKE_C_COMPILER_LOADED	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_LOADED 1)$/;"	v
 CMAKE_C_COMPILER_RANLIB	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_RANLIB "\/usr\/bin\/gcc-ranlib")$/;"	v
+CMAKE_C_COMPILER_RANLIB	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_RANLIB "\/usr\/bin\/gcc-ranlib")$/;"	v
 CMAKE_C_COMPILER_VERSION	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_VERSION "16.1.1")$/;"	v
+CMAKE_C_COMPILER_VERSION	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_VERSION "16.2.1")$/;"	v
 CMAKE_C_COMPILER_VERSION_INTERNAL	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_VERSION_INTERNAL "")$/;"	v
+CMAKE_C_COMPILER_VERSION_INTERNAL	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_VERSION_INTERNAL "")$/;"	v
 CMAKE_C_COMPILER_WORKS	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_WORKS TRUE)$/;"	v
+CMAKE_C_COMPILER_WORKS	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_WORKS TRUE)$/;"	v
 CMAKE_C_COMPILER_WRAPPER	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_WRAPPER "")$/;"	v
+CMAKE_C_COMPILER_WRAPPER	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_WRAPPER "")$/;"	v
 CMAKE_C_COMPILE_FEATURES	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILE_FEATURES "c_std_90;c_function_prototypes;c_std_99;c_restrict;c_variadic_macr/;"	v
+CMAKE_C_COMPILE_FEATURES	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILE_FEATURES "c_std_90;c_function_prototypes;c_std_99;c_restrict;c_variadic_macr/;"	v
 CMAKE_C_EXTENSIONS	CMakeLists.txt	/^set(CMAKE_C_EXTENSIONS        OFF)$/;"	v
 CMAKE_C_EXTENSIONS_COMPUTED_DEFAULT	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^set(CMAKE_C_EXTENSIONS_COMPUTED_DEFAULT "ON")$/;"	v
+CMAKE_C_EXTENSIONS_COMPUTED_DEFAULT	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^set(CMAKE_C_EXTENSIONS_COMPUTED_DEFAULT "ON")$/;"	v
 CMAKE_C_IGNORE_EXTENSIONS	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^set(CMAKE_C_IGNORE_EXTENSIONS h;H;o;O;obj;OBJ;def;DEF;rc;RC)$/;"	v
+CMAKE_C_IGNORE_EXTENSIONS	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^set(CMAKE_C_IGNORE_EXTENSIONS h;H;o;O;obj;OBJ;def;DEF;rc;RC)$/;"	v
 CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "\/usr\/lib\/gcc\/x86_64-pc-linux-gnu\/16\/include;\/us/;"	v
+CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "\/usr\/lib\/gcc\/x86_64-pc-linux-gnu\/16\/include;\/us/;"	v
 CMAKE_C_IMPLICIT_LINK_DIRECTORIES	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "\/usr\/lib\/gcc\/x86_64-pc-linux-gnu\/16;\/usr\/lib;\/lib/;"	v
+CMAKE_C_IMPLICIT_LINK_DIRECTORIES	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "\/usr\/lib\/gcc\/x86_64-pc-linux-gnu\/16;\/usr\/lib;\/lib/;"	v
 CMAKE_C_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^set(CMAKE_C_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")$/;"	v
+CMAKE_C_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^set(CMAKE_C_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")$/;"	v
 CMAKE_C_IMPLICIT_LINK_LIBRARIES	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^set(CMAKE_C_IMPLICIT_LINK_LIBRARIES "gcc;gcc_s_asneeded;atomic_asneeded;c;gcc;gcc_s_asneeded")$/;"	v
+CMAKE_C_IMPLICIT_LINK_LIBRARIES	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^set(CMAKE_C_IMPLICIT_LINK_LIBRARIES "gcc;gcc_s_asneeded;atomic_asneeded;c;gcc;gcc_s_asneeded")$/;"	v
 CMAKE_C_INCLUDE_REGEX_COMPLAIN	build/CMakeFiles/CMakeDirectoryInformation.cmake	/^set(CMAKE_C_INCLUDE_REGEX_COMPLAIN "^$")$/;"	v
 CMAKE_C_INCLUDE_REGEX_SCAN	build/CMakeFiles/CMakeDirectoryInformation.cmake	/^set(CMAKE_C_INCLUDE_REGEX_SCAN "^.*$")$/;"	v
 CMAKE_C_LIBRARY_ARCHITECTURE	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^set(CMAKE_C_LIBRARY_ARCHITECTURE "")$/;"	v
+CMAKE_C_LIBRARY_ARCHITECTURE	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^set(CMAKE_C_LIBRARY_ARCHITECTURE "")$/;"	v
 CMAKE_C_LINKER_DEPFILE_SUPPORTED	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^set(CMAKE_C_LINKER_DEPFILE_SUPPORTED TRUE)$/;"	v
+CMAKE_C_LINKER_DEPFILE_SUPPORTED	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^set(CMAKE_C_LINKER_DEPFILE_SUPPORTED TRUE)$/;"	v
 CMAKE_C_LINKER_PREFERENCE	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^set(CMAKE_C_LINKER_PREFERENCE 10)$/;"	v
+CMAKE_C_LINKER_PREFERENCE	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^set(CMAKE_C_LINKER_PREFERENCE 10)$/;"	v
 CMAKE_C_LINKER_PUSHPOP_STATE_SUPPORTED	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^set(CMAKE_C_LINKER_PUSHPOP_STATE_SUPPORTED TRUE)$/;"	v
+CMAKE_C_LINKER_PUSHPOP_STATE_SUPPORTED	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^set(CMAKE_C_LINKER_PUSHPOP_STATE_SUPPORTED TRUE)$/;"	v
 CMAKE_C_PLATFORM_ID	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^set(CMAKE_C_PLATFORM_ID "Linux")$/;"	v
+CMAKE_C_PLATFORM_ID	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^set(CMAKE_C_PLATFORM_ID "Linux")$/;"	v
 CMAKE_C_SIMULATE_ID	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^set(CMAKE_C_SIMULATE_ID "")$/;"	v
+CMAKE_C_SIMULATE_ID	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^set(CMAKE_C_SIMULATE_ID "")$/;"	v
 CMAKE_C_SIMULATE_VERSION	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^set(CMAKE_C_SIMULATE_VERSION "")$/;"	v
+CMAKE_C_SIMULATE_VERSION	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^set(CMAKE_C_SIMULATE_VERSION "")$/;"	v
 CMAKE_C_SIZEOF_DATA_PTR	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^set(CMAKE_C_SIZEOF_DATA_PTR "8")$/;"	v
+CMAKE_C_SIZEOF_DATA_PTR	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^set(CMAKE_C_SIZEOF_DATA_PTR "8")$/;"	v
 CMAKE_C_SOURCE_FILE_EXTENSIONS	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^set(CMAKE_C_SOURCE_FILE_EXTENSIONS c;m)$/;"	v
+CMAKE_C_SOURCE_FILE_EXTENSIONS	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^set(CMAKE_C_SOURCE_FILE_EXTENSIONS c;m)$/;"	v
 CMAKE_C_STANDARD	CMakeLists.txt	/^set(CMAKE_C_STANDARD          17)$/;"	v
 CMAKE_C_STANDARD_COMPUTED_DEFAULT	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^set(CMAKE_C_STANDARD_COMPUTED_DEFAULT "23")$/;"	v
+CMAKE_C_STANDARD_COMPUTED_DEFAULT	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^set(CMAKE_C_STANDARD_COMPUTED_DEFAULT "23")$/;"	v
 CMAKE_C_STANDARD_LATEST	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^set(CMAKE_C_STANDARD_LATEST "23")$/;"	v
+CMAKE_C_STANDARD_LATEST	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^set(CMAKE_C_STANDARD_LATEST "23")$/;"	v
 CMAKE_C_STANDARD_REQUIRED	CMakeLists.txt	/^set(CMAKE_C_STANDARD_REQUIRED ON)$/;"	v
 CMAKE_DEPENDS_DEPENDENCY_FILES	build/CMakeFiles/simplecalc.dir/DependInfo.cmake	/^set(CMAKE_DEPENDS_DEPENDENCY_FILES$/;"	v
 CMAKE_DEPENDS_GENERATOR	build/CMakeFiles/Makefile.cmake	/^set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")$/;"	v
@@ -225,9 +279,13 @@ CMAKE_Fortran_TARGET_FORWARD_LINKED_INFO_FILES	build/CMakeFiles/simplecalc.dir/D
 CMAKE_Fortran_TARGET_LINKED_INFO_FILES	build/CMakeFiles/simplecalc.dir/DependInfo.cmake	/^set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES$/;"	v
 CMAKE_Fortran_TARGET_MODULE_DIR	build/CMakeFiles/simplecalc.dir/DependInfo.cmake	/^set(CMAKE_Fortran_TARGET_MODULE_DIR "")$/;"	v
 CMAKE_HOST_SYSTEM	build/CMakeFiles/4.4.0/CMakeSystem.cmake	/^set(CMAKE_HOST_SYSTEM "Linux-7.1.2-arch3-1")$/;"	v
+CMAKE_HOST_SYSTEM	build/CMakeFiles/4.4.2/CMakeSystem.cmake	/^set(CMAKE_HOST_SYSTEM "Linux-7.1.8-arch1-3")$/;"	v
 CMAKE_HOST_SYSTEM_NAME	build/CMakeFiles/4.4.0/CMakeSystem.cmake	/^set(CMAKE_HOST_SYSTEM_NAME "Linux")$/;"	v
+CMAKE_HOST_SYSTEM_NAME	build/CMakeFiles/4.4.2/CMakeSystem.cmake	/^set(CMAKE_HOST_SYSTEM_NAME "Linux")$/;"	v
 CMAKE_HOST_SYSTEM_PROCESSOR	build/CMakeFiles/4.4.0/CMakeSystem.cmake	/^set(CMAKE_HOST_SYSTEM_PROCESSOR "x86_64")$/;"	v
+CMAKE_HOST_SYSTEM_PROCESSOR	build/CMakeFiles/4.4.2/CMakeSystem.cmake	/^set(CMAKE_HOST_SYSTEM_PROCESSOR "x86_64")$/;"	v
 CMAKE_HOST_SYSTEM_VERSION	build/CMakeFiles/4.4.0/CMakeSystem.cmake	/^set(CMAKE_HOST_SYSTEM_VERSION "7.1.2-arch3-1")$/;"	v
+CMAKE_HOST_SYSTEM_VERSION	build/CMakeFiles/4.4.2/CMakeSystem.cmake	/^set(CMAKE_HOST_SYSTEM_VERSION "7.1.8-arch1-3")$/;"	v
 CMAKE_INSTALL_COMPONENT	build/cmake_install.cmake	/^    set(CMAKE_INSTALL_COMPONENT "${COMPONENT}")$/;"	v
 CMAKE_INSTALL_COMPONENT	build/cmake_install.cmake	/^    set(CMAKE_INSTALL_COMPONENT)$/;"	v
 CMAKE_INSTALL_CONFIG_NAME	build/cmake_install.cmake	/^    set(CMAKE_INSTALL_CONFIG_NAME "")$/;"	v
@@ -237,63 +295,110 @@ CMAKE_INSTALL_MANIFEST	build/cmake_install.cmake	/^  set(CMAKE_INSTALL_MANIFEST 
 CMAKE_INSTALL_PREFIX	build/cmake_install.cmake	/^  set(CMAKE_INSTALL_PREFIX "\/usr\/local")$/;"	v
 CMAKE_INSTALL_SO_NO_EXE	build/cmake_install.cmake	/^  set(CMAKE_INSTALL_SO_NO_EXE "0")$/;"	v
 CMAKE_INTERNAL_PLATFORM_ABI	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^  set(CMAKE_INTERNAL_PLATFORM_ABI "${CMAKE_C_COMPILER_ABI}")$/;"	v
+CMAKE_INTERNAL_PLATFORM_ABI	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^  set(CMAKE_INTERNAL_PLATFORM_ABI "${CMAKE_C_COMPILER_ABI}")$/;"	v
 CMAKE_LIBRARY_ARCHITECTURE	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^  set(CMAKE_LIBRARY_ARCHITECTURE "")$/;"	v
+CMAKE_LIBRARY_ARCHITECTURE	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^  set(CMAKE_LIBRARY_ARCHITECTURE "")$/;"	v
 CMAKE_LINKER	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^set(CMAKE_LINKER "\/usr\/bin\/ld")$/;"	v
+CMAKE_LINKER	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^set(CMAKE_LINKER "\/usr\/bin\/ld")$/;"	v
 CMAKE_LINKER_LINK	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^set(CMAKE_LINKER_LINK "")$/;"	v
+CMAKE_LINKER_LINK	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^set(CMAKE_LINKER_LINK "")$/;"	v
 CMAKE_LINKER_LLD	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^set(CMAKE_LINKER_LLD "")$/;"	v
+CMAKE_LINKER_LLD	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^set(CMAKE_LINKER_LLD "")$/;"	v
 CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^set(CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED TRUE)$/;"	v
+CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^set(CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED TRUE)$/;"	v
 CMAKE_MAKEFILE_DEPENDS	build/CMakeFiles/Makefile.cmake	/^set(CMAKE_MAKEFILE_DEPENDS$/;"	v
 CMAKE_MAKEFILE_OUTPUTS	build/CMakeFiles/Makefile.cmake	/^set(CMAKE_MAKEFILE_OUTPUTS$/;"	v
 CMAKE_MAKEFILE_PRODUCTS	build/CMakeFiles/Makefile.cmake	/^set(CMAKE_MAKEFILE_PRODUCTS$/;"	v
 CMAKE_MT	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^set(CMAKE_MT "")$/;"	v
+CMAKE_MT	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^set(CMAKE_MT "")$/;"	v
 CMAKE_OBJDUMP	build/cmake_install.cmake	/^  set(CMAKE_OBJDUMP "\/usr\/bin\/objdump")$/;"	v
 CMAKE_RANLIB	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^set(CMAKE_RANLIB "\/usr\/bin\/ranlib")$/;"	v
+CMAKE_RANLIB	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^set(CMAKE_RANLIB "\/usr\/bin\/ranlib")$/;"	v
 CMAKE_RELATIVE_PATH_TOP_BINARY	build/CMakeFiles/CMakeDirectoryInformation.cmake	/^set(CMAKE_RELATIVE_PATH_TOP_BINARY "\/home\/reicher\/Projects\/tool_dev_projects\/simple_calc\/b/;"	v
 CMAKE_RELATIVE_PATH_TOP_SOURCE	build/CMakeFiles/CMakeDirectoryInformation.cmake	/^set(CMAKE_RELATIVE_PATH_TOP_SOURCE "\/home\/reicher\/Projects\/tool_dev_projects\/simple_calc")$/;"	v
 CMAKE_SIZEOF_VOID_P	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^  set(CMAKE_SIZEOF_VOID_P "${CMAKE_C_SIZEOF_DATA_PTR}")$/;"	v
+CMAKE_SIZEOF_VOID_P	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^  set(CMAKE_SIZEOF_VOID_P "${CMAKE_C_SIZEOF_DATA_PTR}")$/;"	v
 CMAKE_SOURCE_DIR	build/Makefile	/^CMAKE_SOURCE_DIR = \/home\/reicher\/Projects\/tool_dev_projects\/simple_calc$/;"	m
 CMAKE_SYSTEM	build/CMakeFiles/4.4.0/CMakeSystem.cmake	/^set(CMAKE_SYSTEM "Linux-7.1.2-arch3-1")$/;"	v
+CMAKE_SYSTEM	build/CMakeFiles/4.4.2/CMakeSystem.cmake	/^set(CMAKE_SYSTEM "Linux-7.1.8-arch1-3")$/;"	v
 CMAKE_SYSTEM_LOADED	build/CMakeFiles/4.4.0/CMakeSystem.cmake	/^set(CMAKE_SYSTEM_LOADED 1)$/;"	v
+CMAKE_SYSTEM_LOADED	build/CMakeFiles/4.4.2/CMakeSystem.cmake	/^set(CMAKE_SYSTEM_LOADED 1)$/;"	v
 CMAKE_SYSTEM_NAME	build/CMakeFiles/4.4.0/CMakeSystem.cmake	/^set(CMAKE_SYSTEM_NAME "Linux")$/;"	v
+CMAKE_SYSTEM_NAME	build/CMakeFiles/4.4.2/CMakeSystem.cmake	/^set(CMAKE_SYSTEM_NAME "Linux")$/;"	v
 CMAKE_SYSTEM_PROCESSOR	build/CMakeFiles/4.4.0/CMakeSystem.cmake	/^set(CMAKE_SYSTEM_PROCESSOR "x86_64")$/;"	v
+CMAKE_SYSTEM_PROCESSOR	build/CMakeFiles/4.4.2/CMakeSystem.cmake	/^set(CMAKE_SYSTEM_PROCESSOR "x86_64")$/;"	v
 CMAKE_SYSTEM_VERSION	build/CMakeFiles/4.4.0/CMakeSystem.cmake	/^set(CMAKE_SYSTEM_VERSION "7.1.2-arch3-1")$/;"	v
+CMAKE_SYSTEM_VERSION	build/CMakeFiles/4.4.2/CMakeSystem.cmake	/^set(CMAKE_SYSTEM_VERSION "7.1.8-arch1-3")$/;"	v
 CMAKE_TAPI	build/CMakeFiles/4.4.0/CMakeCCompiler.cmake	/^set(CMAKE_TAPI "CMAKE_TAPI-NOTFOUND")$/;"	v
+CMAKE_TAPI	build/CMakeFiles/4.4.2/CMakeCCompiler.cmake	/^set(CMAKE_TAPI "CMAKE_TAPI-NOTFOUND")$/;"	v
 COMPILER_ID	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^# define COMPILER_ID /;"	d	file:
+COMPILER_ID	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^# define COMPILER_ID /;"	d	file:
 COMPILER_VERSION	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^#   define COMPILER_VERSION /;"	d	file:
+COMPILER_VERSION	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^#   define COMPILER_VERSION /;"	d	file:
 COMPILER_VERSION_INTERNAL	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^#   define COMPILER_VERSION_INTERNAL /;"	d	file:
 COMPILER_VERSION_INTERNAL	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^#  define COMPILER_VERSION_INTERNAL /;"	d	file:
 COMPILER_VERSION_INTERNAL	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^# define COMPILER_VERSION_INTERNAL /;"	d	file:
+COMPILER_VERSION_INTERNAL	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^#   define COMPILER_VERSION_INTERNAL /;"	d	file:
+COMPILER_VERSION_INTERNAL	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^#  define COMPILER_VERSION_INTERNAL /;"	d	file:
+COMPILER_VERSION_INTERNAL	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^# define COMPILER_VERSION_INTERNAL /;"	d	file:
 COMPILER_VERSION_INTERNAL_STR	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^# define COMPILER_VERSION_INTERNAL_STR /;"	d	file:
+COMPILER_VERSION_INTERNAL_STR	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^# define COMPILER_VERSION_INTERNAL_STR /;"	d	file:
 COMPILER_VERSION_MAJOR	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^  # define COMPILER_VERSION_MAJOR /;"	d	file:
 COMPILER_VERSION_MAJOR	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^#   define COMPILER_VERSION_MAJOR /;"	d	file:
 COMPILER_VERSION_MAJOR	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^#  define COMPILER_VERSION_MAJOR /;"	d	file:
 COMPILER_VERSION_MAJOR	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^# define COMPILER_VERSION_MAJOR /;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^  # define COMPILER_VERSION_MAJOR /;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^#   define COMPILER_VERSION_MAJOR /;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^#  define COMPILER_VERSION_MAJOR /;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^# define COMPILER_VERSION_MAJOR /;"	d	file:
 COMPILER_VERSION_MINOR	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^  # define COMPILER_VERSION_MINOR /;"	d	file:
 COMPILER_VERSION_MINOR	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^#   define COMPILER_VERSION_MINOR /;"	d	file:
 COMPILER_VERSION_MINOR	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^#  define COMPILER_VERSION_MINOR /;"	d	file:
 COMPILER_VERSION_MINOR	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^# define COMPILER_VERSION_MINOR /;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^  # define COMPILER_VERSION_MINOR /;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^#   define COMPILER_VERSION_MINOR /;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^#  define COMPILER_VERSION_MINOR /;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^# define COMPILER_VERSION_MINOR /;"	d	file:
 COMPILER_VERSION_PATCH	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^  # define COMPILER_VERSION_PATCH /;"	d	file:
 COMPILER_VERSION_PATCH	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^#   define COMPILER_VERSION_PATCH /;"	d	file:
 COMPILER_VERSION_PATCH	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^#  define COMPILER_VERSION_PATCH /;"	d	file:
 COMPILER_VERSION_PATCH	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^# define COMPILER_VERSION_PATCH /;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^  # define COMPILER_VERSION_PATCH /;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^#   define COMPILER_VERSION_PATCH /;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^#  define COMPILER_VERSION_PATCH /;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^# define COMPILER_VERSION_PATCH /;"	d	file:
 COMPILER_VERSION_TWEAK	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^  # define COMPILER_VERSION_TWEAK /;"	d	file:
 COMPILER_VERSION_TWEAK	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^#  define COMPILER_VERSION_TWEAK /;"	d	file:
 COMPILER_VERSION_TWEAK	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^# define COMPILER_VERSION_TWEAK /;"	d	file:
+COMPILER_VERSION_TWEAK	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^  # define COMPILER_VERSION_TWEAK /;"	d	file:
+COMPILER_VERSION_TWEAK	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^#  define COMPILER_VERSION_TWEAK /;"	d	file:
+COMPILER_VERSION_TWEAK	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^# define COMPILER_VERSION_TWEAK /;"	d	file:
 C_STD	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^# define C_STD /;"	d	file:
 C_STD	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^# define C_STD __POCC_STDC/;"	d	file:
+C_STD	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^# define C_STD /;"	d	file:
+C_STD	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^# define C_STD __POCC_STDC/;"	d	file:
 C_STD_11	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^#define C_STD_11 /;"	d	file:
+C_STD_11	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^#define C_STD_11 /;"	d	file:
 C_STD_17	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^#define C_STD_17 /;"	d	file:
+C_STD_17	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^#define C_STD_17 /;"	d	file:
 C_STD_23	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^#define C_STD_23 /;"	d	file:
+C_STD_23	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^#define C_STD_23 /;"	d	file:
 C_STD_99	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^#define C_STD_99 /;"	d	file:
+C_STD_99	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^#define C_STD_99 /;"	d	file:
 C_VERSION	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^# define C_VERSION /;"	d	file:
 C_VERSION	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^# define C_VERSION$/;"	d	file:
+C_VERSION	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^# define C_VERSION /;"	d	file:
+C_VERSION	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^# define C_VERSION$/;"	d	file:
 DEC	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^#define DEC(/;"	d	file:
+DEC	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^#define DEC(/;"	d	file:
 EQUALS	build/Makefile	/^EQUALS = =$/;"	m
 EXECUTABLE_NAME	CMakeLists.txt	/^set(EXECUTABLE_NAME  simplecalc)$/;"	v
 Execute	README.md	/^## Execute$/;"	s	chapter:Instruction
 FIRST_CHARACTER	src/calculator.c	/^#define FIRST_CHARACTER /;"	d	file:
 HEX	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^#define HEX(/;"	d	file:
+HEX	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^#define HEX(/;"	d	file:
 ID_VOID_MAIN	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^# define ID_VOID_MAIN$/;"	d	file:
+ID_VOID_MAIN	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^# define ID_VOID_MAIN$/;"	d	file:
 INTEGER_TYPE_SIGNED	include/calculator.h	/^	INTEGER_TYPE_SIGNED = 0,$/;"	e	enum:__anon4a5d91580203
 INTEGER_TYPE_UNSIGNED	include/calculator.h	/^	INTEGER_TYPE_UNSIGNED$/;"	e	enum:__anon4a5d91580203
 InstallScripts	build/CMakeFiles/InstallScripts.json	/^	"InstallScripts" : $/;"	a
@@ -315,6 +420,10 @@ PLATFORM_ID	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^#  define PL
 PLATFORM_ID	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^#  define PLATFORM_ID$/;"	d	file:
 PLATFORM_ID	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^# define PLATFORM_ID /;"	d	file:
 PLATFORM_ID	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^# define PLATFORM_ID$/;"	d	file:
+PLATFORM_ID	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^#  define PLATFORM_ID /;"	d	file:
+PLATFORM_ID	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^#  define PLATFORM_ID$/;"	d	file:
+PLATFORM_ID	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^# define PLATFORM_ID /;"	d	file:
+PLATFORM_ID	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^# define PLATFORM_ID$/;"	d	file:
 PROGRAM_NAME	src/main.c	/^#define PROGRAM_NAME /;"	d	file:
 Parallel	build/CMakeFiles/InstallScripts.json	/^	"Parallel" : false$/;"	b
 REQUIRED_NUMBER_OF_ARGUMENTS	src/main.c	/^#define REQUIRED_NUMBER_OF_ARGUMENTS /;"	d	file:
@@ -322,15 +431,26 @@ RM	build/Makefile	/^RM = \/usr\/bin\/cmake -E rm -f$/;"	m
 SHELL	build/Makefile	/^SHELL = \/bin\/sh$/;"	m
 SIMULATE_ID	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^#  define SIMULATE_ID /;"	d	file:
 SIMULATE_ID	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^# define SIMULATE_ID /;"	d	file:
+SIMULATE_ID	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^#  define SIMULATE_ID /;"	d	file:
+SIMULATE_ID	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^# define SIMULATE_ID /;"	d	file:
 SIMULATE_VERSION_MAJOR	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^#  define SIMULATE_VERSION_MAJOR /;"	d	file:
 SIMULATE_VERSION_MAJOR	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^# define SIMULATE_VERSION_MAJOR /;"	d	file:
+SIMULATE_VERSION_MAJOR	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^#  define SIMULATE_VERSION_MAJOR /;"	d	file:
+SIMULATE_VERSION_MAJOR	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^# define SIMULATE_VERSION_MAJOR /;"	d	file:
 SIMULATE_VERSION_MINOR	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^#  define SIMULATE_VERSION_MINOR /;"	d	file:
 SIMULATE_VERSION_MINOR	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^# define SIMULATE_VERSION_MINOR /;"	d	file:
+SIMULATE_VERSION_MINOR	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^#  define SIMULATE_VERSION_MINOR /;"	d	file:
+SIMULATE_VERSION_MINOR	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^# define SIMULATE_VERSION_MINOR /;"	d	file:
 SIMULATE_VERSION_PATCH	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^#   define SIMULATE_VERSION_PATCH /;"	d	file:
 SIMULATE_VERSION_PATCH	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^#  define SIMULATE_VERSION_PATCH /;"	d	file:
 SIMULATE_VERSION_PATCH	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^# define SIMULATE_VERSION_PATCH /;"	d	file:
+SIMULATE_VERSION_PATCH	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^#   define SIMULATE_VERSION_PATCH /;"	d	file:
+SIMULATE_VERSION_PATCH	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^#  define SIMULATE_VERSION_PATCH /;"	d	file:
+SIMULATE_VERSION_PATCH	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^# define SIMULATE_VERSION_PATCH /;"	d	file:
 STRINGIFY	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^#define STRINGIFY(X) STRINGIFY_/;"	d	file:
+STRINGIFY	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^#define STRINGIFY(X) STRINGIFY_/;"	d	file:
 STRINGIFY_HELPER	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^#define STRINGIFY_HELPER(/;"	d	file:
+STRINGIFY_HELPER	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^#define STRINGIFY_HELPER(/;"	d	file:
 TODO: populate instructions	docs/simplecalc-instructions.md	/^# TODO: populate instructions $/;"	c
 Test Cases	README.md	/^### Test Cases$/;"	S	section:Instruction""Execute
 UINT32_BIT_COUNT	src/bit_operations.c	/^#define UINT32_BIT_COUNT /;"	d	file:
@@ -344,41 +464,61 @@ __anon4a5d9158030a	include/calculator.h	/^{$/;"	u
 __anon4a5d91580408	include/calculator.h	/^{$/;"	s
 __anon93c894e40103	include/calc_status.h	/^{$/;"	g
 __has_include	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^#  define __has_include(/;"	d	file:
+__has_include	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^#  define __has_include(/;"	d	file:
 add	src/calc_operations.c	/^calc_status_t add(int32_t f_num, int32_t s_num, int32_t * p_result)$/;"	f	typeref:typename:calc_status_t
 all	build/Makefile	/^all: cmake_check_build_system$/;"	t
 calc_status_t	include/calc_status.h	/^} calc_status_t;$/;"	t	typeref:enum:__anon93c894e40103
+calculate_arit	src/calculator.c	/^static calc_status_t calculate_arit(operator_t operator,$/;"	f	typeref:typename:calc_status_t	file:
+calculate_bit	src/calculator.c	/^static calc_status_t calculate_bit(operator_t operator,$/;"	f	typeref:typename:calc_status_t	file:
 calculate_result	src/calculator.c	/^calc_status_t calculate_result(operator_t operator,$/;"	f	typeref:typename:calc_status_t
 clean	build/Makefile	/^clean:$/;"	t
 clean/fast	build/Makefile	/^clean\/fast: clean$/;"	t
 cmake_check_build_system	build/Makefile	/^cmake_check_build_system:$/;"	t
 cmake_force	build/Makefile	/^cmake_force:$/;"	t
 const	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^# define const$/;"	d	file:
+const	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^# define const$/;"	d	file:
 default_target	build/Makefile	/^default_target: all$/;"	t
 depend	build/Makefile	/^depend:$/;"	t
 divide	src/calc_operations.c	/^calc_status_t divide(int32_t f_num, int32_t s_num, int32_t *p_result)$/;"	f	typeref:typename:calc_status_t
 edit_cache	build/Makefile	/^edit_cache:$/;"	t
 edit_cache/fast	build/Makefile	/^edit_cache\/fast: edit_cache$/;"	t
+get_arithm_operator	src/calculator.c	/^static calc_status_t get_arithm_operator(const char * p_operator_string,$/;"	f	typeref:typename:calc_status_t	file:
+get_bit_operator	src/calculator.c	/^static calc_status_t get_bit_operator(const char * p_operator_string,$/;"	f	typeref:typename:calc_status_t	file:
 get_integer_type	src/calculator.c	/^integer_type_t get_integer_type(operator_t operator)$/;"	f	typeref:typename:integer_type_t
 get_operator	src/calculator.c	/^calc_status_t get_operator(const char * p_operator_string,$/;"	f	typeref:typename:calc_status_t
 help	build/Makefile	/^help:$/;"	t
 info_arch	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";$/;"	v	typeref:typename:char const *
+info_arch	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";$/;"	v	typeref:typename:char const *
 info_compiler	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^char const* info_compiler = "INFO" ":" "compiler[" COMPILER_ID "]";$/;"	v	typeref:typename:char const *
+info_compiler	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^char const* info_compiler = "INFO" ":" "compiler[" COMPILER_ID "]";$/;"	v	typeref:typename:char const *
 info_cray	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^char const *info_cray = "INFO" ":" "compiler_wrapper[CrayPrgEnv]";$/;"	v	typeref:typename:char const *
+info_cray	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^char const *info_cray = "INFO" ":" "compiler_wrapper[CrayPrgEnv]";$/;"	v	typeref:typename:char const *
 info_language_extensions_default	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^const char* info_language_extensions_default = "INFO" ":" "extensions_default["$/;"	v	typeref:typename:const char *
+info_language_extensions_default	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^const char* info_language_extensions_default = "INFO" ":" "extensions_default["$/;"	v	typeref:typename:const char *
 info_language_standard_default	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^const char* info_language_standard_default =$/;"	v	typeref:typename:const char *
+info_language_standard_default	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^const char* info_language_standard_default =$/;"	v	typeref:typename:const char *
 info_platform	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^char const* info_platform = "INFO" ":" "platform[" PLATFORM_ID "]";$/;"	v	typeref:typename:char const *
+info_platform	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^char const* info_platform = "INFO" ":" "platform[" PLATFORM_ID "]";$/;"	v	typeref:typename:char const *
 info_simulate	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^char const* info_simulate = "INFO" ":" "simulate[" SIMULATE_ID "]";$/;"	v	typeref:typename:char const *
+info_simulate	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^char const* info_simulate = "INFO" ":" "simulate[" SIMULATE_ID "]";$/;"	v	typeref:typename:char const *
 info_simulate_version	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^char const info_simulate_version[] = {$/;"	v	typeref:typename:char const[]
+info_simulate_version	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^char const info_simulate_version[] = {$/;"	v	typeref:typename:char const[]
 info_version	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^char const info_version[] = {$/;"	v	typeref:typename:char const[]
 info_version	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^char const* info_version = "INFO" ":" "compiler_version[" COMPILER_VERSION "]";$/;"	v	typeref:typename:char const *
+info_version	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^char const info_version[] = {$/;"	v	typeref:typename:char const[]
+info_version	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^char const* info_version = "INFO" ":" "compiler_version[" COMPILER_VERSION "]";$/;"	v	typeref:typename:char const *
 info_version_internal	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^char const info_version_internal[] = {$/;"	v	typeref:typename:char const[]
 info_version_internal	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^char const* info_version_internal = "INFO" ":" "compiler_version_internal[" COMPILER_VERSION_INT/;"	v	typeref:typename:char const *
+info_version_internal	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^char const info_version_internal[] = {$/;"	v	typeref:typename:char const[]
+info_version_internal	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^char const* info_version_internal = "INFO" ":" "compiler_version_internal[" COMPILER_VERSION_INT/;"	v	typeref:typename:char const *
 integer_t	include/calculator.h	/^} integer_t;$/;"	t	typeref:struct:__anon4a5d91580408
 integer_type_t	include/calculator.h	/^} integer_type_t;$/;"	t	typeref:enum:__anon4a5d91580203
 l_rotate	src/bit_operations.c	/^calc_status_t l_rotate(uint32_t f_num, uint32_t s_num, uint32_t * p_result)$/;"	f	typeref:typename:calc_status_t
 l_shift	src/bit_operations.c	/^calc_status_t l_shift(uint32_t f_num, uint32_t s_num, uint32_t * p_result)$/;"	f	typeref:typename:calc_status_t
 main	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^int main(argc, argv) int argc; char *argv[];$/;"	f
 main	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^void main() {}$/;"	f	typeref:typename:void
+main	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^int main(argc, argv) int argc; char *argv[];$/;"	f
+main	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^void main() {}$/;"	f	typeref:typename:void
 main	src/main.c	/^int main(int argc, char *argv[])$/;"	f	typeref:typename:int
 modulo	src/calc_operations.c	/^calc_status_t modulo(int32_t f_num, int32_t s_num, int32_t *p_result)$/;"	f	typeref:typename:calc_status_t
 multiply	src/calc_operations.c	/^calc_status_t multiply(int32_t f_num, int32_t s_num, int32_t * p_result)$/;"	f	typeref:typename:calc_status_t
@@ -394,6 +534,7 @@ print_error	src/calculator.c	/^void print_error(calc_status_t status)$/;"	f	type
 print_result	src/calculator.c	/^void print_result(const integer_t * p_result)$/;"	f	typeref:typename:void
 print_usage	src/calculator.c	/^void print_usage(const char * p_name)$/;"	f	typeref:typename:void
 qnxnto	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^char const* qnxnto = "INFO" ":" "qnxnto[]";$/;"	v	typeref:typename:char const *
+qnxnto	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^char const* qnxnto = "INFO" ":" "qnxnto[]";$/;"	v	typeref:typename:char const *
 r_rotate	src/bit_operations.c	/^calc_status_t r_rotate(uint32_t f_num, uint32_t s_num, uint32_t * p_result)$/;"	f	typeref:typename:calc_status_t
 r_shift	src/bit_operations.c	/^calc_status_t r_shift(uint32_t f_num, uint32_t s_num, uint32_t * p_result)$/;"	f	typeref:typename:calc_status_t
 rebuild_cache	build/Makefile	/^rebuild_cache:$/;"	t
@@ -436,3 +577,4 @@ validate_unsigned_integers	src/calculator.c	/^static calc_status_t validate_unsi
 value	include/calculator.h	/^	value_t	   value;$/;"	m	struct:__anon4a5d91580408	typeref:typename:value_t
 value_t	include/calculator.h	/^} value_t;$/;"	t	typeref:union:__anon4a5d9158030a
 volatile	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^# define volatile$/;"	d	file:
+volatile	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^# define volatile$/;"	d	file:
