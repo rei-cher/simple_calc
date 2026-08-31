@@ -462,6 +462,7 @@ __anon4a5d91580103	include/calculator.h	/^{$/;"	g
 __anon4a5d91580203	include/calculator.h	/^{$/;"	g
 __anon4a5d9158030a	include/calculator.h	/^{$/;"	u
 __anon4a5d91580408	include/calculator.h	/^{$/;"	s
+__anon4a5d91580508	include/calculator.h	/^{$/;"	s
 __anon93c894e40103	include/calc_status.h	/^{$/;"	g
 __has_include	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^#  define __has_include(/;"	d	file:
 __has_include	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^#  define __has_include(/;"	d	file:
@@ -512,7 +513,9 @@ info_version_internal	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^ch
 info_version_internal	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^char const info_version_internal[] = {$/;"	v	typeref:typename:char const[]
 info_version_internal	build/CMakeFiles/4.4.2/CompilerIdC/CMakeCCompilerId.c	/^char const* info_version_internal = "INFO" ":" "compiler_version_internal[" COMPILER_VERSION_INT/;"	v	typeref:typename:char const *
 integer_t	include/calculator.h	/^} integer_t;$/;"	t	typeref:struct:__anon4a5d91580408
+integer_type	include/calculator.h	/^	integer_type_t integer_type;$/;"	m	struct:__anon4a5d91580508	typeref:typename:integer_type_t
 integer_type_t	include/calculator.h	/^} integer_type_t;$/;"	t	typeref:enum:__anon4a5d91580203
+integer_validation_t	include/calculator.h	/^} integer_validation_t;$/;"	t	typeref:struct:__anon4a5d91580508
 l_rotate	src/bit_operations.c	/^calc_status_t l_rotate(uint32_t f_num, uint32_t s_num, uint32_t * p_result)$/;"	f	typeref:typename:calc_status_t
 l_shift	src/bit_operations.c	/^calc_status_t l_shift(uint32_t f_num, uint32_t s_num, uint32_t * p_result)$/;"	f	typeref:typename:calc_status_t
 main	build/CMakeFiles/4.4.0/CompilerIdC/CMakeCCompilerId.c	/^int main(argc, argv) int argc; char *argv[];$/;"	f
@@ -526,6 +529,10 @@ op_and	src/bit_operations.c	/^calc_status_t op_and(uint32_t f_num, uint32_t s_nu
 op_or	src/bit_operations.c	/^calc_status_t op_or(uint32_t f_num, uint32_t s_num, uint32_t * p_result)$/;"	f	typeref:typename:calc_status_t
 op_xor	src/bit_operations.c	/^calc_status_t op_xor(uint32_t f_num, uint32_t s_num, uint32_t * p_result)$/;"	f	typeref:typename:calc_status_t
 operator_t	include/calculator.h	/^} operator_t;$/;"	t	typeref:enum:__anon4a5d91580103
+p_f_input	include/calculator.h	/^	const char * p_f_input;$/;"	m	struct:__anon4a5d91580508	typeref:typename:const char *
+p_f_integer	include/calculator.h	/^	integer_t * p_f_integer;$/;"	m	struct:__anon4a5d91580508	typeref:typename:integer_t *
+p_s_input	include/calculator.h	/^	const char * p_s_input;$/;"	m	struct:__anon4a5d91580508	typeref:typename:const char *
+p_s_integer	include/calculator.h	/^	integer_t * p_s_integer;$/;"	m	struct:__anon4a5d91580508	typeref:typename:integer_t *
 parse_signed_integer	src/calculator.c	/^static calc_status_t parse_signed_integer(const char * p_input, int32_t * p_value)$/;"	f	typeref:typename:calc_status_t	file:
 parse_unsigned_integer	src/calculator.c	/^static calc_status_t parse_unsigned_integer(const char * p_input, uint32_t * p_value)$/;"	f	typeref:typename:calc_status_t	file:
 preinstall	build/Makefile	/^preinstall: all$/;"	t
@@ -571,7 +578,7 @@ src/main.s	build/Makefile	/^src\/main.s: src\/main.c.s$/;"	t
 subtract	src/calc_operations.c	/^calc_status_t subtract(int32_t f_num, int32_t s_num, int32_t * p_result)$/;"	f	typeref:typename:calc_status_t
 type	include/calculator.h	/^	integer_type_t type;$/;"	m	struct:__anon4a5d91580408	typeref:typename:integer_type_t
 unsigned_value	include/calculator.h	/^	uint32_t unsigned_value;$/;"	m	union:__anon4a5d9158030a	typeref:typename:uint32_t
-validate_integers	src/calculator.c	/^calc_status_t validate_integers(const char * p_f_input,$/;"	f	typeref:typename:calc_status_t
+validate_integers	src/calculator.c	/^calc_status_t validate_integers(integer_validation_t * p_validation)$/;"	f	typeref:typename:calc_status_t
 validate_signed_integers	src/calculator.c	/^static calc_status_t validate_signed_integers(const char * p_f_input,$/;"	f	typeref:typename:calc_status_t	file:
 validate_unsigned_integers	src/calculator.c	/^static calc_status_t validate_unsigned_integers(const char * p_f_input,$/;"	f	typeref:typename:calc_status_t	file:
 value	include/calculator.h	/^	value_t	   value;$/;"	m	struct:__anon4a5d91580408	typeref:typename:value_t

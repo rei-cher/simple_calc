@@ -57,6 +57,18 @@ typedef struct
 } integer_t;
 
 /**
+ * @brief Structure to hold parameters for validate_integers function
+ */
+typedef struct
+{
+	const char * p_f_input;
+	const char * p_s_input;
+	integer_type_t integer_type;
+	integer_t * p_f_integer;
+	integer_t * p_s_integer;
+} integer_validation_t;
+
+/**
  * @brief Function that based on the user's input string operator
  * 		  determines what operation to perform
  *
@@ -88,12 +100,7 @@ integer_type_t get_integer_type(operator_t operator);
  *
  * @return calc_status_t
  */
-//TODO: define structure for parameter
-calc_status_t validate_integers(const char * p_f_input,
-								const char * p_s_input,
-								integer_type_t integer_type,
-								integer_t * p_f_integer,
-								integer_t * p_s_integer);
+calc_status_t validate_integers(integer_validation_t * p_validation);
 
 /**
  * @brief Calculating result based on the operator and operands

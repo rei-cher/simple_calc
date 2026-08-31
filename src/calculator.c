@@ -17,33 +17,106 @@
 
 #define FIRST_CHARACTER 0
 
+/**
+ * @brief Calculates the result of the arithmetical operation
+ * 			based on the operator 
+ *
+ * @param operator
+ * @param p_f_integer
+ * @param p_s_integer
+ * @param p_result
+ *
+ * @return Returns calc_status_t with status
+ */
 static calc_status_t calculate_arit(operator_t operator,
 								  const integer_t * p_f_integer,
 								  const integer_t * p_s_integer,
 								  integer_t * p_result);
 
+/**
+ * @brief Calculates the result of the bitwise operation
+ * 			based on the operator
+ *
+ * @param operator
+ * @param p_f_integer
+ * @param 
+ *
+ * @return Returns calc_status_t with status
+ */
 static calc_status_t calculate_bit(operator_t operator,
 								 const integer_t * p_f_integer,
 								 const integer_t * p_s_integer,
 								 integer_t * p_result);
 
+/**
+ * @brief Parsing user's input as signed integer
+ *
+ * @param p_input
+ * @param p_value
+ *
+ * @return Returns calc_status_t with status
+ */
 static calc_status_t parse_signed_integer(const char * p_input, int32_t * p_value);
 
+/**
+ * @brief Parsing user's input as unsigned integer
+ *
+ * @param p_input
+ * @param p_value
+ *
+ * @return Returns calc_status_t with status
+ */
 static calc_status_t parse_unsigned_integer(const char * p_input, uint32_t * p_value);
 
+/**
+ * @brief Validates signed integer
+ *
+ * @param p_f_input
+ * @param p_s_input
+ * @param p_f_integer
+ * @param p_s_integer
+ *
+ * @return Returns calc_status_t with status
+ */
 static calc_status_t validate_signed_integers(const char * p_f_input,
 											  const char * p_s_input,
 											  integer_t * p_f_integer,
 											  integer_t * p_s_integer);
 
+/**
+ * @brief Validates unsigned integer
+ *
+ * @param p_f_input
+ * @param p_s_input
+ * @param p_f_integer
+ * @param p_s_integer
+ *
+ * @return Returns calc_status_t with status
+ */
 static calc_status_t validate_unsigned_integers(const char * p_f_input,
 											  const char * p_s_input,
 											  integer_t * p_f_integer,
 											  integer_t * p_s_integer);
 
+/**
+ * @brief Checks which arithmetic operations is passed by user 
+ *
+ * @param p_operator_string
+ * @param p_operator
+ *
+ * @return Returns calc_status_t with status 
+ */
 static calc_status_t get_arithm_operator(const char * p_operator_string,
 										 operator_t * p_operator);
 
+/**
+ * @brief Checks which bitwise operations is passed by user
+ *
+ * @param p_operator_string
+ * @param p_operator
+ *
+ * @return Returns calc_status_t with status
+ */
 static calc_status_t get_bit_operator(const char * p_operator_string,
 										 operator_t * p_operator);
 
@@ -210,41 +283,45 @@ END:
 	return status;
 }
 
-// TODO: if more than 4 parameters use struct
-// have a description for the struct
-calc_status_t validate_integers(const char * p_f_input,
-								const char * p_s_input,
-								integer_type_t integer_type,
-								integer_t * p_f_integer,
-								integer_t * p_s_integer)
+calc_status_t validate_integers(integer_validation_t * p_validation)
 {
 	calc_status_t status = CALC_STATUS_OK;
 
-	if ((NULL == p_f_input) || (NULL == p_s_input) ||
-		(NULL == p_f_integer) || (NULL == p_s_integer))
+	if (NULL == p_validation)
 	{
 		status = CALC_STATUS_NULL_POINTER;
+		goto END;
 	}
 	
-	if (INTEGER_TYPE_SIGNED == integer_type)
+	if ((NULL == p_validation->p_f_input) ||
+		(NULL == p_validation->p_s_input) ||
+		(NULL == p_validation->p_f_integer) ||
+		(NULL == p_validation->p_s_integer))
 	{
-		status = validate_signed_integers(p_f_input, 
-										  p_s_input,
-										  p_f_integer,
-										  p_s_integer);
+		status = CALC_STATUS_NULL_POINTER;
+		goto END;
 	}
-	else if (INTEGER_TYPE_UNSIGNED == integer_type)
+	
+	if (INTEGER_TYPE_UNSIGNED == p_validation->integer_type)
 	{
-		status = validate_unsigned_integers(p_f_input,
-											p_s_input,
-											p_f_integer,
-											p_s_integer);
+		status = validate_unsigned_integers(p_validation->p_f_input,
+											p_validation->p_s_input,
+											p_validation->p_f_integer,
+											p_validation->p_s_integer);
+	}
+	else if (INTEGER_TYPE_SIGNED == p_validation->integer_type)
+	{
+		status = validate_signed_integers(p_validation->p_f_input,
+										 p_validation->p_s_input,
+										 p_validation->p_f_integer,
+										 p_validation->p_s_integer);
 	}
 	else
 	{
 		status = CALC_STATUS_INVALID_INTEGER_TYPE;
 	}
 
+END:
 	return status;
 
 

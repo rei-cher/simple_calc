@@ -7,7 +7,6 @@
 #include <stdlib.h>
 #include "calculator.h"
 
-// Move to calc.h
 #define REQUIRED_NUMBER_OF_ARGUMENTS 4
 #define PROGRAM_NAME 0
 #define USER_FIRST_INTEGER 1
@@ -22,6 +21,7 @@ int main(int argc, char *argv[])
 
 	integer_t f_integer = {0};
 	integer_t s_integer = {0};
+	integer_validation_t validation = {0};
 	integer_t result = {0};
 
 	int exit_status = EXIT_FAILURE;
@@ -43,11 +43,13 @@ int main(int argc, char *argv[])
 
 	if (CALC_STATUS_OK == status)
 	{
-		status = validate_integers(argv[USER_FIRST_INTEGER],
-								   argv[USER_SECOND_INTEGER],
-								   integer_type,
-								   &f_integer,
-								   &s_integer);
+		validation.p_f_input = argv[USER_FIRST_INTEGER];
+		validation.p_s_input = argv[USER_SECOND_INTEGER];
+		validation.integer_type = integer_type;
+		validation.p_f_integer = &f_integer;
+		validation.p_s_integer = &s_integer;
+
+		status = validate_integers(&validation);
 	}
 
 	if (CALC_STATUS_OK == status)
